@@ -2,30 +2,10 @@ import {
   Card,
   CardHeader,
   Typography,
-  Button,
   CardBody,
   Chip,
-  CardFooter,
-  Tabs,
-  TabsHeader,
-  Tab,
   Avatar,
 } from "@material-tailwind/react";
-
-const TABS = [
-  {
-    label: "All",
-    value: "all",
-  },
-  {
-    label: "Monitored",
-    value: "monitored",
-  },
-  {
-    label: "Unmonitored",
-    value: "unmonitored",
-  },
-];
 
 const TABLE_HEAD = ["Player", "Region", "Rating", "Rank"];
 
@@ -34,7 +14,7 @@ const TABLE_ROWS = [
     img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
     name: "Caprice Yuri",
     team: "Apocalypse Avengers",
-    profession: "Everything",
+    profession: "Hellraiser",
     region: "NA",
     online: true,
     rank: "1",
@@ -88,50 +68,27 @@ const TABLE_ROWS = [
 
 export default function Table() {
   return (
-    <section className="flex justify-center items-center h-screen">
-      <Card className="h-full w-full md:w-4/5 md:h-4/5 shadow-[0_0_50px_indigo]">
-        <CardHeader
-          floated={false}
-          shadow={false}
-          clems-center
-          justassName="rounded-lg"
-        >
-          <div className="mb-8 flex itify-between gap-8">
-            <div>
-              <Typography variant="h5" color="blue-gray">
-                Players list
-              </Typography>
-              <Typography color="gray" className="mt-1 font-normal">
-                See information about all players
-              </Typography>
+    <section className="flex justify-center items-center w-full h-lvh overflow-y-auto">
+      <Card className="w-full md:w-5/6 lg:w-4/5 bg-transparent backdrop-filter backdrop-invert backdrop-blur-xl">
+        <CardHeader shadow={false} className="mt-4 bg-transparent text-center">
+          <div>
+            <div className="text-indigo-800 text-3xl">Players List</div>
+            <div className="text-indigo-500">
+              See information about all players
             </div>
-          </div>
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <Tabs value="all" className="w-full md:w-max">
-              <TabsHeader>
-                {TABS.map(({ label, value }) => (
-                  <Tab key={value} value={value}>
-                    &nbsp;&nbsp;{label}&nbsp;&nbsp;
-                  </Tab>
-                ))}
-              </TabsHeader>
-            </Tabs>
           </div>
         </CardHeader>
 
-        <CardBody className="px-0">
-          <table className="mt-4 w-full min-w-max table-auto text-left">
+        <CardBody className="px-0 py-4">
+          <table className="mt-2 w-full">
             <thead>
               <tr>
                 {TABLE_HEAD.map((head) => (
-                  <th
-                    key={head}
-                    className="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
-                  >
+                  <th key={head} className="border-y border-blue-gray-100 p-4">
                     <Typography
-                      variant="small"
-                      color="blue-gray"
-                      className="flex items-center justify-between gap-2 font-normal leading-none opacity-70"
+                      variant="h5"
+                      color="indigo"
+                      className="flex justify-between font-bold"
                     >
                       {head}
                     </Typography>
@@ -139,6 +96,7 @@ export default function Table() {
                 ))}
               </tr>
             </thead>
+
             <tbody>
               {TABLE_ROWS.map(
                 (
@@ -147,8 +105,8 @@ export default function Table() {
                 ) => {
                   const isLast = index === TABLE_ROWS.length - 1;
                   const classes = isLast
-                    ? "p-4 md:text-center"
-                    : "p-4 border-b border-green-100 md:text-center";
+                    ? "p-4"
+                    : "p-4 border-b border-green-100";
 
                   return (
                     <tr key={name}>
@@ -186,7 +144,7 @@ export default function Table() {
                           <Typography
                             variant="small"
                             color="black"
-                            className="font-semibold opacity-70"
+                            className="font-semibold"
                           >
                             {region}
                           </Typography>
@@ -215,19 +173,6 @@ export default function Table() {
             </tbody>
           </table>
         </CardBody>
-        <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
-          <Typography variant="small" color="blue-gray" className="font-normal">
-            Page 1 of 1
-          </Typography>
-          <div className="flex gap-2">
-            <Button variant="outlined" size="sm" disabled>
-              Previous
-            </Button>
-            <Button variant="outlined" size="sm" disabled>
-              Next
-            </Button>
-          </div>
-        </CardFooter>
       </Card>
     </section>
   );
