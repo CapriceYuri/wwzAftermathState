@@ -64,12 +64,39 @@ const TABLE_ROWS = [
     online: false,
     rank: "6",
   },
+  {
+    img: "bot",
+    name: "Bot",
+    team: "Bot",
+    profession: "Bot",
+    region: "Test",
+    online: false,
+    rank: "9",
+  },
+  {
+    img: "bot",
+    name: "Bot",
+    team: "Bot",
+    profession: "Bot",
+    region: "Test",
+    online: false,
+    rank: "9",
+  },
+  {
+    img: "bot",
+    name: "Bot",
+    team: "Bot",
+    profession: "Bot",
+    region: "Test",
+    online: false,
+    rank: "9",
+  },
 ];
 
 export default function Table() {
   return (
-    <section className="flex justify-center items-center w-full h-lvh overflow-y-auto">
-      <Card className="w-full md:w-5/6 lg:w-4/5 bg-transparent backdrop-filter backdrop-invert backdrop-blur-xl">
+    <div className="h-dvh w-full overflow-auto grid grid-cols-1 place-items-center py-10">
+      <Card className="w-[95%] lg:w-5/6 bg-transparent backdrop-filter backdrop-invert backdrop-blur-xl">
         <CardHeader shadow={false} className="mt-4 bg-transparent text-center">
           <div>
             <div className="text-indigo-800 text-3xl">Players List</div>
@@ -174,6 +201,6 @@ export default function Table() {
           </table>
         </CardBody>
       </Card>
-    </section>
+    </div>
   );
 }
