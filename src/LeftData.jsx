@@ -2,7 +2,12 @@ export const DevData = [
   {
     img: "player-X",
     name: "Caprice Yuri",
-    mark: "Game Balance Director @ Saber",
+    mark: "Consultant @ Saber",
+  },
+  {
+    img: "dev-Saber",
+    name: "Saber Interactive",
+    mark: "Developers & Publishers Of WWZ",
   },
   {
     img: "dev-Andreia",

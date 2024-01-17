@@ -11,13 +11,14 @@ import { CardBody } from "@material-tailwind/react";
 
 import { PlayerData } from "./Data";
 import { DevData } from "./LeftData";
+import ChartData from "./Chart";
 
 export default function MainSection() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-3">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
-      <section className="grid grid-cols-1 items-start py-8 relative">
-        <Card className="lg:w-[95%] w-5/6 mx-auto sticky top-0 bg-transparent">
+      <section className="grid grid-cols-1 items-start pb-8 lg:py-8 relative order-2 lg:order-1">
+        <Card className="lg:w-[80%] w-5/6 mx-auto sticky top-0 bg-transparent backdrop-blur-md lg:backdrop-blur-none shadow-[0_0_50px_purple] lg:shadow-none">
           <List>
             {DevData.map((dev) => (
               <ListItem>
@@ -46,63 +47,66 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="py-5 col-span-2">
-        <Card className="w-5/6 h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm  shadow-[inset_0_0_50px_10px_purple]">
-          <CardBody className="h-full flex flex-col justify-center text-center rounded-xl p-10">
-            <Typography variant="h5" color="gray" className="mb-2">
-              Unleash The Survivor Within
-            </Typography>
-            <Typography variant="paragraph" color="gray">
-              Survivors, <br />
-              <br />
-              Listen up, because this is our moment. The world's gone mad, and
-              the undead are knocking on our door. But guess what? We're not
-              going down without a fight.
-              <br />
-              <br />
-              "We're survivors, and survival starts now. Are you with me?
-            </Typography>
+      <section className="py-5 col-span-2 order-1 lg:order-2">
+        <Card className="w-[95%] lg:w-5/6 h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm  shadow-[0_0_50px_purple]">
+          <CardBody>
+            <ChartData />
           </CardBody>
         </Card>
-        <Card className="w-[95%] lg:w-5/6 mx-auto bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
+        <Card className="w-[95%] lg:w-5/6 mx-auto my-4 bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
           <List>
             {PlayerData.map((player) => (
               <ListItem
                 key={player.rank}
-                className="flex flex-row justify-between hover:bg-indigo-300 focus:bg-purple-400"
+                className="flex w-full hover:bg-indigo-300 focus:bg-purple-400"
               >
-                <ListItemPrefix>
-                  <Avatar variant="rounded" src={`${player.img}.png`} />
-                </ListItemPrefix>
+                <div className="flex flex-col lg:flex-row items-start w-3/5 lg:w-2/5">
+                  <ListItemPrefix>
+                    <Avatar variant="rounded" src={`${player.img}.png`} />
+                  </ListItemPrefix>
 
-                <div>
-                  <Typography variant="h6" color="amber">
-                    {player.name}
+                  <div>
+                    <Typography variant="h6" color="white">
+                      {player.name}
+                    </Typography>
+                    <Typography
+                      variant="small"
+                      color="amber"
+                      className="font-normal"
+                    >
+                      {player.mark}
+                    </Typography>
+                  </div>
+                </div>
+
+                <div className="mx-4 text-center w-2/5">
+                  <Typography variant="h6" color="white">
+                    {player.map}
                   </Typography>
                   <Typography
                     variant="small"
-                    color="white"
+                    color="amber"
                     className="font-normal"
                   >
-                    {player.quote}
+                    {player.diff}
                   </Typography>
                 </div>
 
-                <div className="mx-4">
-                  <Typography variant="h6" color="blue-gray">
-                    {player.name}
+                <div className="mx-4 text-center w-2/5">
+                  <Typography variant="h6" color="white">
+                    Time
                   </Typography>
                   <Typography
                     variant="small"
-                    color="gray"
+                    color="amber"
                     className="font-normal"
                   >
-                    {player.quote}
+                    9m 59s
                   </Typography>
                 </div>
 
-                <ListItemPrefix>
-                  <a href="http://www.youtube.com" target="_blank">
+                <ListItemPrefix className="w-1/5">
+                  <a href={player.src} target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
