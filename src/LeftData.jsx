@@ -3,7 +3,7 @@ export const DevData = [
     id: 1,
     img: "player-X",
     name: "Caprice Yuri",
-    mark: "Consultant @ Saber",
+    mark: "Nobody",
   },
   {
     id: 2,

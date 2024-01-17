@@ -7,8 +7,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-import { CardBody } from "@material-tailwind/react";
-
 import { PlayerData } from "./Data";
 import { DevData } from "./LeftData";
 import ChartData from "./Chart";
@@ -63,13 +61,11 @@ export default function MainSection() {
       </section>
 
       <section className="py-5 col-span-3 order-1 lg:order-2">
-        <Card className="w-[95%] lg:w-5/6 h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm  shadow-[0_0_50px_purple]">
-          <CardBody>
-            <ChartData />
-          </CardBody>
+        <Card className="w-[95%] h-[40%] lg:h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm shadow-[0_0_50px_purple]">
+          <ChartData />
         </Card>
 
-        <Card className="w-[95%] lg:w-5/6 mx-auto mt-8 bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
+        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
           <List>
             {sortedData.map((player) => (
               <ListItem

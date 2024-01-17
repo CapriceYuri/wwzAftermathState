@@ -93,7 +93,7 @@ const chartConfig = {
 
 export default function ChartData() {
   return (
-    <Card className="bg-transparent backdrop-blur-md">
+    <Card className="h-full w-full bg-transparent backdrop-blur-md p-4 flex flex-col justify-evenly ">
       <CardHeader
         floated={false}
         shadow={false}
