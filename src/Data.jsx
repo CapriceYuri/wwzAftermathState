@@ -7,6 +7,8 @@ export const PlayerData = [
     map: "New York 1",
     diff: "Extreme",
     src: "https://www.youtube.com/",
+    type: "Hellraiser",
+    time: 60,
   },
   {
     id: "2",
@@ -15,6 +17,8 @@ export const PlayerData = [
     map: "Descent",
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=s7mesGq4_hc",
+    type: "Exterminator",
+    time: 1186,
   },
   {
     id: "3",
@@ -23,6 +27,8 @@ export const PlayerData = [
     map: "Descent",
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=RToV-UtGn9M",
+    type: "Slasher",
+    time: 975,
   },
   {
     id: "4",
@@ -31,6 +37,8 @@ export const PlayerData = [
     map: "Descent",
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=KdxxOMu8yWI",
+    type: "Slasher",
+    time: 992,
   },
   {
     id: "5",
@@ -39,6 +47,8 @@ export const PlayerData = [
     map: "Descent",
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=bp1FIrgrUGo&t=4s",
+    type: "Fixer",
+    time: 791,
   },
   {
     id: "6",
@@ -47,5 +57,7 @@ export const PlayerData = [
     map: "Descent",
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=rYTNJCAL-XM",
+    type: "Gunslinger",
+    time: 1110,
   },
 ];

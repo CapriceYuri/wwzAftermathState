@@ -13,29 +13,44 @@ import { PlayerData } from "./Data";
 import { DevData } from "./LeftData";
 import ChartData from "./Chart";
 
+const sortedData = PlayerData.sort((a, b) => (a.time > b.time ? 1 : -1));
+
 export default function MainSection() {
+  const conversion = (sec) => {
+    let min = Math.trunc(sec / 60);
+    let reminder = sec % 60;
+    return `${min}m ${reminder}s`;
+  };
+
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-3">
+    <section className="grid grid-cols-1 lg:grid-cols-4">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
+
       <section className="grid grid-cols-1 items-start pb-8 lg:py-8 relative order-2 lg:order-1">
-        <Card className="lg:w-[80%] w-5/6 mx-auto sticky top-0 bg-transparent backdrop-blur-md lg:backdrop-blur-none shadow-[0_0_50px_purple] lg:shadow-none">
+        <Card className="lg:w-[80%] w-5/6 mx-auto sticky top-0 bg-transparent">
           <List>
             {DevData.map((dev) => (
-              <ListItem>
-                <ListItemPrefix>
+              <ListItem
+                key={dev.id}
+                className="hover:bg-transparent cursor-default focus:bg-transparent"
+              >
+                <ListItemPrefix className="shrink-0">
                   <Avatar
                     variant="circular"
                     alt="candice"
                     src={`${dev.img}.png`}
+                    className="shrink-0"
                   />
                 </ListItemPrefix>
+
                 <div>
                   <Typography variant="h6" color="white">
                     {dev.name}
                   </Typography>
+
                   <Typography
                     variant="small"
-                    color="red"
+                    color="amber"
                     className="font-normal"
                   >
                     {dev.mark}
@@ -47,42 +62,53 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="py-5 col-span-2 order-1 lg:order-2">
+      <section className="py-5 col-span-3 order-1 lg:order-2">
         <Card className="w-[95%] lg:w-5/6 h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm  shadow-[0_0_50px_purple]">
           <CardBody>
             <ChartData />
           </CardBody>
         </Card>
-        <Card className="w-[95%] lg:w-5/6 mx-auto my-4 bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
+
+        <Card className="w-[95%] lg:w-5/6 mx-auto mt-8 bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
           <List>
-            {PlayerData.map((player) => (
+            {sortedData.map((player) => (
               <ListItem
                 key={player.rank}
-                className="flex w-full hover:bg-indigo-300 focus:bg-purple-400"
+                className=" hover:bg-indigo-300 focus:bg-purple-400"
               >
-                <div className="flex flex-col lg:flex-row items-start w-3/5 lg:w-2/5">
-                  <ListItemPrefix>
-                    <Avatar variant="rounded" src={`${player.img}.png`} />
-                  </ListItemPrefix>
-
+                <div className="flex lg:flex-row flex-col text-center w-1/3">
+                  <Avatar
+                    variant="rounded"
+                    src={`${player.img}.png`}
+                    className="mx-auto lg:mx-1"
+                  />
                   <div>
-                    <Typography variant="h6" color="white">
-                      {player.name}
-                    </Typography>
                     <Typography
                       variant="small"
-                      color="amber"
+                      color="white"
+                      className="font-bold"
+                    >
+                      {player.name}
+                    </Typography>
+
+                    <Typography
+                      variant="small"
+                      color="cyan"
                       className="font-normal"
                     >
                       {player.mark}
                     </Typography>
                   </div>
                 </div>
-
                 <div className="mx-4 text-center w-2/5">
-                  <Typography variant="h6" color="white">
+                  <Typography
+                    variant="small"
+                    color="white"
+                    className="font-semibold"
+                  >
                     {player.map}
                   </Typography>
+
                   <Typography
                     variant="small"
                     color="amber"
@@ -92,20 +118,21 @@ export default function MainSection() {
                   </Typography>
                 </div>
 
-                <div className="mx-4 text-center w-2/5">
+                <div className="mx-4 text-center w-1/4">
                   <Typography variant="h6" color="white">
-                    Time
+                    {player.type}
                   </Typography>
+
                   <Typography
                     variant="small"
                     color="amber"
                     className="font-normal"
                   >
-                    9m 59s
+                    {conversion(player.time)}
                   </Typography>
                 </div>
 
-                <ListItemPrefix className="w-1/5">
+                <div className="flex justify-center max-w-sm">
                   <a href={player.src} target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +147,7 @@ export default function MainSection() {
                       />
                     </svg>
                   </a>
-                </ListItemPrefix>
+                </div>
               </ListItem>
             ))}
           </List>
