@@ -6,7 +6,7 @@ function App() {
       <video
         src="wwz.mp4"
         alt="background-image"
-        className="object-cover h-auto min-h-full min-w-full absolute"
+        className="object-cover h-lvh min-w-full absolute"
         autoPlay
         loop
         muted

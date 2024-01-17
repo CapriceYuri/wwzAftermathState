@@ -14,7 +14,7 @@ const TABLE_ROWS = [
     img: "player-X",
     name: "Caprice Yuri",
     team: "Bunko Only",
-    profession: "Hellraiser",
+    profession: "Vanguard",
     region: "Still Downloading",
     online: true,
     power: 10,
@@ -24,7 +24,7 @@ const TABLE_ROWS = [
     img: "player-Osanai",
     name: "Osanai",
     team: "Hello Kitty",
-    profession: "Exterminator",
+    profession: "Vanguard",
     region: "Cat Shelter",
     online: true,
     rank: "2",
@@ -33,7 +33,7 @@ const TABLE_ROWS = [
     img: "player-aedonis",
     name: "Aedonis",
     team: "Kimiko Cult",
-    profession: "Gunslinger",
+    profession: "Vanguard",
     region: "Only NY1",
     online: true,
     rank: "3",
@@ -96,7 +96,7 @@ const TABLE_ROWS = [
 
 export default function Table() {
   return (
-    <div className="h-lvh w-full overflow-auto grid grid-cols-1 place-items-center py-8">
+    <div className="h-[100%] w-full overflow-y-auto grid grid-cols-1 place-items-center py-8">
       <Card className="w-[95%] lg:w-5/6 bg-transparent backdrop-filter backdrop-invert backdrop-blur-3xl">
         <CardHeader shadow={false} className="mt-4 bg-transparent text-center">
           <div>
@@ -137,7 +137,7 @@ export default function Table() {
                   return (
                     <tr key={name}>
                       <td className={classes}>
-                        <div className="flex flex-col md:flex-row gap-3 ">
+                        <div className="flex flex-col md:flex-row items-center gap-3 ">
                           <Avatar src={`${img}.png`} alt={name} size="sm" />
 
                           <div className="flex flex-col">
