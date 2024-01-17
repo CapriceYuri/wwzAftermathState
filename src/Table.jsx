@@ -96,7 +96,7 @@ const TABLE_ROWS = [
 
 export default function Table() {
   return (
-    <div className="h-dvh w-full overflow-auto grid grid-cols-1 place-items-center py-10">
+    <div className="h-lvh w-full overflow-auto grid grid-cols-1 place-items-center py-8">
       <Card className="w-[95%] lg:w-5/6 bg-transparent backdrop-filter backdrop-invert backdrop-blur-3xl">
         <CardHeader shadow={false} className="mt-4 bg-transparent text-center">
           <div>
