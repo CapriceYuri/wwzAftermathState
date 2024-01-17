@@ -20,7 +20,7 @@ export const DevData = [
   {
     id: 4,
     img: "dev-George",
-    name: "Andreia Mendes",
+    name: "George",
     mark: "Community Representative @ Saber",
   },
   {
