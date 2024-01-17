@@ -2,7 +2,7 @@ import Table from "./Table";
 
 function App() {
   return (
-    <div className="h-lvh w-full">
+    <div className="h-dvh w-full">
       <video
         src="wwz.mp4"
         alt="background-image"
