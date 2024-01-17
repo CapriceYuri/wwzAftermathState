@@ -17,6 +17,7 @@ const TABLE_ROWS = [
     profession: "Hellraiser",
     region: "Still Downloading",
     online: true,
+    power: 10,
     rank: "1",
   },
   {
@@ -43,7 +44,7 @@ const TABLE_ROWS = [
     team: "Kimiko Cult",
     profession: "Vanguard",
     region: "Still AFK",
-    online: false,
+    online: true,
     rank: "4",
   },
   {
@@ -52,7 +53,7 @@ const TABLE_ROWS = [
     team: "Kimiko Cult",
     profession: "Vanguard",
     region: "Trap In PVP",
-    online: false,
+    online: true,
     rank: "5",
   },
   {
@@ -61,7 +62,7 @@ const TABLE_ROWS = [
     team: "Kimiko Cult",
     profession: "Vanguard",
     region: "Spam Shield",
-    online: false,
+    online: true,
     rank: "6",
   },
   {
@@ -70,7 +71,7 @@ const TABLE_ROWS = [
     team: "Bot",
     profession: "Bot",
     region: "Test",
-    online: false,
+    online: true,
     rank: "9",
   },
   {
@@ -79,7 +80,7 @@ const TABLE_ROWS = [
     team: "Bot",
     profession: "Bot",
     region: "Test",
-    online: false,
+    online: true,
     rank: "9",
   },
   {
@@ -88,7 +89,7 @@ const TABLE_ROWS = [
     team: "Bot",
     profession: "Bot",
     region: "Test",
-    online: false,
+    online: true,
     rank: "9",
   },
 ];
@@ -96,13 +97,11 @@ const TABLE_ROWS = [
 export default function Table() {
   return (
     <div className="h-dvh w-full overflow-auto grid grid-cols-1 place-items-center py-10">
-      <Card className="w-[95%] lg:w-5/6 bg-transparent backdrop-filter backdrop-invert backdrop-blur-xl">
+      <Card className="w-[95%] lg:w-5/6 bg-transparent backdrop-filter backdrop-invert backdrop-blur-3xl">
         <CardHeader shadow={false} className="mt-4 bg-transparent text-center">
           <div>
-            <div className="text-indigo-800 text-3xl">Players List</div>
-            <div className="text-indigo-500">
-              See information about all players
-            </div>
+            <div className="text-indigo-800 text-3xl">Players Ranking</div>
+            <div className="text-indigo-500">Information about all players</div>
           </div>
         </CardHeader>
 
@@ -111,7 +110,7 @@ export default function Table() {
             <thead>
               <tr>
                 {TABLE_HEAD.map((head) => (
-                  <th key={head} className="border-y border-blue-gray-100 p-4">
+                  <th key={head} className="border-y border-indigo-400 p-4">
                     <Typography
                       variant="h5"
                       color="indigo"
@@ -127,30 +126,31 @@ export default function Table() {
             <tbody>
               {TABLE_ROWS.map(
                 (
-                  { img, name, team, profession, region, online, rank },
+                  { img, name, team, profession, region, online, rank, power },
                   index
                 ) => {
                   const isLast = index === TABLE_ROWS.length - 1;
                   const classes = isLast
                     ? "p-4"
-                    : "p-4 border-b border-green-100";
+                    : "p-4 border-b border-indigo-200";
 
                   return (
                     <tr key={name}>
                       <td className={classes}>
-                        <div className="flex items-center gap-3">
+                        <div className="flex flex-col md:flex-row gap-3 ">
                           <Avatar src={`${img}.png`} alt={name} size="sm" />
+
                           <div className="flex flex-col">
                             <Typography
                               variant="h6"
-                              color="black"
-                              className="font-normal"
+                              color="indigo"
+                              className="font-bold"
                             >
                               {name}
                             </Typography>
                             <Typography
                               variant="small"
-                              color="deep-purple"
+                              color="amber"
                               className="font-normal"
                             >
                               {team}
@@ -162,34 +162,38 @@ export default function Table() {
                       <td className={classes}>
                         <div className="flex flex-col">
                           <Typography
-                            variant="small"
-                            color="deep-purple"
-                            className="font-normal"
+                            variant="h6"
+                            color="indigo"
+                            className="font-bold"
                           >
                             {profession}
                           </Typography>
                           <Typography
                             variant="small"
-                            color="black"
-                            className="font-semibold"
+                            color="amber"
+                            className="font-normal"
                           >
                             {region}
                           </Typography>
                         </div>
                       </td>
                       <td className={classes}>
-                        <div className="w-max">
+                        <div className="w-max flex flex-col md:flex-row gap-2">
                           <Chip
-                            variant="ghost"
                             size="sm"
-                            value={online ? "S" : "A+"}
+                            value={online ? "S+" : "A+"}
                             color={online ? "red" : "blue"}
+                          />
+                          <Chip
+                            size="sm"
+                            value={power > 5 ? "Tag1" : "Tag2"}
+                            color={power ? "indigo" : "blue"}
                           />
                         </div>
                       </td>
 
                       <td className={classes}>
-                        <Typography variant="h4" color="black">
+                        <Typography variant="h4" color="indigo">
                           {rank}
                         </Typography>
                       </td>
