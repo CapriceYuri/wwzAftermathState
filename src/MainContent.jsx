@@ -15,7 +15,6 @@ import { useState } from "react";
 import { PlayerData } from "./Data";
 import { ExtremePlayer } from "./ExtremeData";
 import { HordePlayer } from "./HordeData";
-import ChartData from "./Chart";
 
 import { TestData } from "./Data2";
 
@@ -50,9 +49,9 @@ export default function MainSection() {
     <section className="grid grid-cols-2 xl:grid-cols-4 relative">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
 
-      <section className="grid grid-cols-1 justify-start pb-8 mt-20 xl:mt-0 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
+      <section className="grid grid-cols-1 justify-start pb-8 mt-5 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
-          <List className="grid grid-cols-1 px-0 pb-8 mx-0">
+          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
             {HordePlayer.map((dev) => (
               <ListItem
                 key={dev.id}
@@ -94,11 +93,15 @@ export default function MainSection() {
       </section>
 
       <section className="py-5 col-span-2 order-1 xl:order-2">
-        <Card className="w-[95%] h-[40%] xl:h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm shadow-[0_0_50px_purple]">
-          <ChartData />
+        <Card className="w-[95%] h-80 mx-auto mb-4 bg-transparent backdrop-blur-sm shadow-[0_0_20px_purple] relative">
+          <img
+            src="placeholder.png"
+            className="h-full w-full object-cover rounded-2xl absolute -z-10"
+          />
+          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-500 opacity-60 rounded-xl"></div>
         </Card>
 
-        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple]">
+        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
           <List>
             {pageInfo.map((player) => (
               <ListItem
@@ -183,9 +186,9 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="grid grid-cols-1 justify-start pb-8 mt-20 xl:mt-0 xl:pb-8 xl:pt-0 relative order-3 xl:order-3 mx-auto">
+      <section className="grid grid-cols-1 justify-start pb-8 mt-5 xl:pb-8 xl:pt-0 relative order-3 xl:order-3 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
-          <List className="grid grid-cols-1px-0 pb-8 mx-0">
+          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
             {ExtremePlayer.map((dev) => (
               <ListItem
                 key={dev.id}
