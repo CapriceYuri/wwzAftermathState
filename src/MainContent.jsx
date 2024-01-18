@@ -6,6 +6,7 @@ import {
   Card,
   Typography,
   CardFooter,
+  Carousel,
 } from "@material-tailwind/react";
 
 import React from "react";
@@ -137,31 +138,155 @@ export default function MainSection() {
             className="h-full w-full object-cover rounded-2xl absolute"
           />
           <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
-          <div className="z-40">
-            <Typography variant="h5" color="orange" className="text-center p-2">
-              LATEST
-            </Typography>
-          </div>
-          <div className="grid grid-cols-1 z-40 place-items-center my-auto">
-            <div className="flex flex-col items-center">
-              <Avatar
-                src="player-SiberianPsych0.png"
-                withBorder={true}
-                className="p-0.5"
-                color="amber"
-              />
-              <div>
-                <Typography variant="h6" color="amber">
-                  SiberianPsych0
-                </Typography>
-                <Typography
-                  variant="small"
-                  color="amber"
-                  className="font-normal"
-                  children={""}
-                ></Typography>
+          <div className="z-40"></div>
+          <div className="grid grid-cols-1 z-40 my-auto">
+            <Carousel
+              className="rounded-xl"
+              transition={{ duration: 1 }}
+              loop={true}
+              autoplay={true}
+            >
+              <div className="h-[200px] w-full">
+                <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                  <Avatar
+                    src="player-SiberianPsych0.png"
+                    size="xl"
+                    withBorder={true}
+                    className="p-0.5"
+                    color="amber"
+                  />
+                  <div>
+                    <Typography variant="h4" color="amber">
+                      SiberianPsych0
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"Descent"}
+                    ></Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"13m 11s"}
+                    ></Typography>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div className="h-[200px] w-full">
+                <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                  <Avatar
+                    src="player-aedonis.png"
+                    size="xl"
+                    withBorder={true}
+                    className="p-0.5"
+                    color="amber"
+                  />
+                  <div>
+                    <Typography variant="h4" color="amber">
+                      Aedonis
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"Descent"}
+                    ></Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"100% Headshot Rate"}
+                    ></Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="h-[200px] w-full">
+                <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                  <Avatar
+                    src="player-Mew.png"
+                    size="xl"
+                    withBorder={true}
+                    className="p-0.5"
+                    color="amber"
+                  />
+                  <div>
+                    <Typography variant="h4" color="amber">
+                      Mewtality
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"PVP"}
+                    ></Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"Shadow Abuser"}
+                    ></Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="h-[200px] w-full">
+                <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                  <Avatar
+                    src="player-Tina.png"
+                    size="xl"
+                    withBorder={true}
+                    className="p-0.5"
+                    color="amber"
+                  />
+                  <div>
+                    <Typography variant="h4" color="amber">
+                      Tina
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"WWZ"}
+                    ></Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"Bug Abuser"}
+                    ></Typography>
+                  </div>
+                </div>
+              </div>
+              <div className="h-[200px] w-full">
+                <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                  <Avatar
+                    src="dev-George.png"
+                    size="xl"
+                    withBorder={true}
+                    className="p-0.5"
+                    color="amber"
+                  />
+                  <div>
+                    <Typography variant="h4" color="amber">
+                      George
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"Community"}
+                    ></Typography>
+                    <Typography
+                      variant="h6"
+                      color="cyan"
+                      className="font-semibold"
+                      children={"Double EXP & XP"}
+                    ></Typography>
+                  </div>
+                </div>
+              </div>
+            </Carousel>
           </div>
           <div className="flex items-center gap-4"></div>
         </Card>
