@@ -181,6 +181,32 @@ export default function MainSection() {
                 children="LEADERBOARD"
               ></Typography>
             </div>
+            <div className="flex flex-row justify-center gap-2">
+              <div>
+                <Typography
+                  color="white"
+                  variant="small"
+                  className="font-normal p-2 bg-black rounded-2xl"
+                  children="Rookie"
+                ></Typography>
+              </div>
+              <div>
+                <Typography
+                  color="white"
+                  variant="small"
+                  className="font-normal p-2 bg-black rounded-2xl"
+                  children="Looting Is a Crime"
+                ></Typography>
+              </div>
+              <div>
+                <Typography
+                  color="white"
+                  variant="small"
+                  className="font-normal p-2 bg-black rounded-2xl"
+                  children="Shaky Hands"
+                ></Typography>
+              </div>
+            </div>
             {pageInfo.map((player, index) => (
               <ListItem
                 key={index}
