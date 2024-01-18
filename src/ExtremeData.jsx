@@ -77,7 +77,7 @@ export const ExtremePlayer = [
     mark: "TW HK MY",
   },
   {
-    id: 13,
+    id: 14,
     img: "players/player-邦邦.png",
     name: "邦邦",
     mark: "TW HK MY",

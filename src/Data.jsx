@@ -1,16 +1,5 @@
 export const PlayerData = [
   {
-    id: "1",
-    img: "player-X",
-    name: "Caprice Yuri",
-    map: "New York 1",
-    diff: "Extreme",
-    src: "https://www.youtube.com/",
-    type: "Hellraiser",
-    time: 60,
-  },
-  {
-    id: "2",
     img: "player-NieR",
     name: "NieR 777",
     map: "Descent",
@@ -20,7 +9,6 @@ export const PlayerData = [
     time: 1186,
   },
   {
-    id: "3",
     img: "player-Rainiere",
     name: "Rainiere888",
     map: "Descent",
@@ -30,7 +18,6 @@ export const PlayerData = [
     time: 975,
   },
   {
-    id: "4",
     img: "player-Zombonis",
     name: "Dr Zombonis",
     map: "Descent",
@@ -40,7 +27,6 @@ export const PlayerData = [
     time: 992,
   },
   {
-    id: "5",
     img: "player-SiberianPsych0",
     name: "SiberianPsych0",
     map: "Descent",
@@ -50,7 +36,6 @@ export const PlayerData = [
     time: 791,
   },
   {
-    id: "6",
     img: "player-visbell",
     name: "visbell",
     map: "Descent",

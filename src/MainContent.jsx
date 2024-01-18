@@ -27,10 +27,6 @@ export default function MainSection() {
   const [active, setActive] = useState(1);
   const [pageInfo, setPageInfo] = useState(allData[0]);
 
-  const handleClick = () => {
-    setPageInfo(allData[1]);
-  };
-
   const getItemProps = (index) => ({
     variant: active === index ? "filled" : "text",
     color: "white",
@@ -52,9 +48,9 @@ export default function MainSection() {
       <section className="grid grid-cols-1 justify-start pb-8 mt-5 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
-            {HordePlayer.map((dev) => (
+            {HordePlayer.map((dev, index) => (
               <ListItem
-                key={dev.id}
+                key={index}
                 className="hover:bg-transparent cursor-default focus:bg-transparent py-1"
               >
                 <ListItemPrefix className="shrink-0">
@@ -71,20 +67,18 @@ export default function MainSection() {
 
                 <div>
                   <Typography
-                    variant="sm"
+                    variant="small"
                     color={dev.id > 10 ? "green" : "deep-orange"}
                     className="font-semibold text-sm"
-                  >
-                    {dev.name}
-                  </Typography>
+                    children={dev.name}
+                  ></Typography>
 
                   <Typography
                     variant="small"
                     color={dev.id > 10 ? "green" : "deep-orange"}
                     className="font-normal"
-                  >
-                    {dev.mark}
-                  </Typography>
+                    children={dev.mark}
+                  ></Typography>
                 </div>
               </ListItem>
             ))}
@@ -105,9 +99,17 @@ export default function MainSection() {
           />
           <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl"></div>
           <List className="z-50">
-            {pageInfo.map((player) => (
+            <div>
+              <Typography
+                color="orange"
+                variant="h5"
+                className="text-center p-2"
+                children="LEADERBOARD"
+              ></Typography>
+            </div>
+            {pageInfo.map((player, index) => (
               <ListItem
-                key={player.rank}
+                key={index}
                 className=" hover:bg-indigo-300 focus:bg-purple-400"
               >
                 <div className="flex xl:flex-row flex-col items-center text-center w-1/3">
@@ -121,9 +123,8 @@ export default function MainSection() {
                       variant="small"
                       color="white"
                       className="font-bold"
-                    >
-                      {player.name}
-                    </Typography>
+                      children={player.name}
+                    ></Typography>
                   </div>
                 </div>
                 <div className="mx-4 text-center w-2/5">
@@ -131,31 +132,30 @@ export default function MainSection() {
                     variant="small"
                     color="white"
                     className="font-semibold"
-                  >
-                    {player.map}
-                  </Typography>
+                    children={player.map}
+                  ></Typography>
 
                   <Typography
                     variant="small"
                     color="amber"
                     className="font-normal"
-                  >
-                    {player.diff}
-                  </Typography>
+                    children={player.diff}
+                  ></Typography>
                 </div>
 
                 <div className="mx-4 text-center w-1/4">
-                  <Typography variant="h6" color="white">
-                    {player.type}
-                  </Typography>
+                  <Typography
+                    variant="h6"
+                    color="white"
+                    children={player.type}
+                  ></Typography>
 
                   <Typography
                     variant="small"
                     color="amber"
                     className="font-normal"
-                  >
-                    {conversion(player.time)}
-                  </Typography>
+                    children={conversion(player.time)}
+                  ></Typography>
                 </div>
 
                 <div className="flex justify-center max-w-sm">
@@ -191,9 +191,9 @@ export default function MainSection() {
       <section className="grid grid-cols-1 justify-start pb-8 mt-5 xl:pb-8 xl:pt-0 relative order-3 xl:order-3 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
-            {ExtremePlayer.map((dev) => (
+            {ExtremePlayer.map((dev, index) => (
               <ListItem
-                key={dev.id}
+                key={index}
                 className="hover:bg-transparent cursor-default focus:bg-transparent py-1"
               >
                 <ListItemPrefix className="shrink-0">
@@ -210,20 +210,18 @@ export default function MainSection() {
 
                 <div>
                   <Typography
-                    variant="sm"
+                    variant="small"
                     color="blue"
                     className="font-normal text-sm"
-                  >
-                    {dev.name}
-                  </Typography>
+                    children={dev.name}
+                  ></Typography>
 
                   <Typography
                     variant="small"
                     color="blue"
                     className="font-normal"
-                  >
-                    {dev.mark}
-                  </Typography>
+                    children={dev.mark}
+                  ></Typography>
                 </div>
               </ListItem>
             ))}
