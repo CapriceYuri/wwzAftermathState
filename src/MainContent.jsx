@@ -5,11 +5,15 @@ import {
   Avatar,
   Card,
   Typography,
+  CardFooter,
+  Button,
+  IconButton,
 } from "@material-tailwind/react";
 
 import { PlayerData } from "./Data";
 import { DevData } from "./LeftData";
 import ChartData from "./Chart";
+import { Pagination } from "./Pagination";
 
 const sortedData = PlayerData.sort((a, b) => (a.time > b.time ? 1 : -1));
 
@@ -24,13 +28,13 @@ export default function MainSection() {
     <section className="grid grid-cols-1 lg:grid-cols-4">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
 
-      <section className="grid grid-cols-1 items-start pb-8 lg:py-8 relative order-2 lg:order-1">
+      <section className="grid grid-cols-1 items-start pb-8 pt-12 lg:pb-8 lg:pt-0 relative order-2 lg:order-1">
         <Card className="lg:w-[80%] w-5/6 mx-auto sticky top-0 bg-transparent">
           <List>
             {DevData.map((dev) => (
               <ListItem
                 key={dev.id}
-                className="hover:bg-transparent cursor-default focus:bg-transparent"
+                className="hover:bg-transparent cursor-default focus:bg-transparent p-2"
               >
                 <ListItemPrefix className="shrink-0">
                   <Avatar
@@ -48,7 +52,7 @@ export default function MainSection() {
 
                   <Typography
                     variant="small"
-                    color="amber"
+                    color={dev.special === 1 ? "red" : "amber"}
                     className="font-normal"
                   >
                     {dev.mark}
@@ -147,6 +151,9 @@ export default function MainSection() {
               </ListItem>
             ))}
           </List>
+          <CardFooter>
+            <Pagination />
+          </CardFooter>
         </Card>
       </section>
     </section>

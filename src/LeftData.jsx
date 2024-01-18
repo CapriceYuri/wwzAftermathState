@@ -35,4 +35,11 @@ export const DevData = [
     name: "ACE 𝔗𝔦𝔫𝔞 𓆩♡𓆪",
     mark: "Moderator @ Discord",
   },
+  {
+    id: 7,
+    img: "player-Mew",
+    name: "ACE 𝔗𝔦𝔫𝔞 𓆩♡𓆪",
+    mark: "Fired Moderator @ Discord",
+    special: 1,
+  },
 ];
