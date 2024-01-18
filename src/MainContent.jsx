@@ -90,7 +90,40 @@ export default function MainSection() {
         <Card
           className="w-[95%] h-56 mx-auto mb-4 bg-transparent"
           shadow={false}
-        ></Card>
+        >
+          <img
+            src="placeholder2.png"
+            className="h-full w-full object-cover rounded-2xl absolute"
+          />
+          <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
+          <div className="z-50">
+            <Typography variant="h5" color="orange" className="text-center p-2">
+              LATEST
+            </Typography>
+          </div>
+          <div className="grid grid-cols-1 z-50 place-items-center my-auto">
+            <div className="flex flex-col items-center">
+              <Avatar
+                src="player-SiberianPsych0.png"
+                withBorder={true}
+                className="p-0.5"
+                color="amber"
+              />
+              <div>
+                <Typography variant="h6" color="amber">
+                  SiberianPsych0
+                </Typography>
+                <Typography
+                  variant="small"
+                  color="amber"
+                  className="font-normal"
+                  children={""}
+                ></Typography>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-4"></div>
+        </Card>
 
         <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
           <img
