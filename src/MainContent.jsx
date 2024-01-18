@@ -13,7 +13,8 @@ import { IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 
 import { PlayerData } from "./Data";
-import { DevData } from "./LeftData";
+import { ExtremePlayer } from "./ExtremeData";
+import { HordePlayer } from "./HordeData";
 import ChartData from "./Chart";
 
 import { TestData } from "./Data2";
@@ -46,60 +47,41 @@ export default function MainSection() {
   };
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-4 relative">
+    <section className="grid grid-cols-1 xl:grid-cols-4 relative">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
 
-      <section className="grid grid-cols-1 w-full justify-start pb-8 mt-20 lg:mt-0 lg:pb-8 lg:pt-0 relative order-2 lg:order-1 ">
-        <Card className="w-full sticky top-0 h-2 bg-transparent">
-          <List className="grid grid-cols-2 lg:grid-cols-1 gap-x-8 px-2 pb-8 mx-auto">
-            {DevData.map((dev) => (
+      <section className="grid grid-cols-1 justify-start pb-8 mt-20 xl:mt-0 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
+        <Card className="sticky top-0 h-2 bg-transparent">
+          <List className="grid grid-cols-1 px-0 pb-8 mx-0">
+            {HordePlayer.map((dev) => (
               <ListItem
                 key={dev.id}
                 className="hover:bg-transparent cursor-default focus:bg-transparent py-1"
               >
-                <ListItemPrefix className="shrink-0 ms-2">
+                <ListItemPrefix className="shrink-0">
                   <Avatar
                     variant="circular"
                     alt="candice"
-                    src={`${dev.img}.png`}
+                    src={`${dev.img}`}
                     size="sm"
                     withBorder={true}
-                    color="orange"
+                    className="p-0.5"
+                    color="deep-orange"
                   />
                 </ListItemPrefix>
 
                 <div>
                   <Typography
                     variant="sm"
-                    color={
-                      dev.type === 1
-                        ? "purple"
-                        : dev.type === 9
-                        ? "red"
-                        : dev.type === 3
-                        ? "green"
-                        : dev.type === 4
-                        ? "blue"
-                        : "pink"
-                    }
-                    className="font-normal"
+                    color="red"
+                    className="font-semibold text-sm"
                   >
                     {dev.name}
                   </Typography>
 
                   <Typography
                     variant="small"
-                    color={
-                      dev.type === 1
-                        ? "purple"
-                        : dev.type === 9
-                        ? "red"
-                        : dev.type === 3
-                        ? "green"
-                        : dev.type === 4
-                        ? "blue"
-                        : "pink"
-                    }
+                    color="red"
                     className="font-normal"
                   >
                     {dev.mark}
@@ -111,23 +93,23 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="py-5 col-span-3 order-1 lg:order-2">
-        <Card className="w-[95%] h-[40%] lg:h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm shadow-[0_0_50px_purple]">
+      <section className="py-5 col-span-2 order-1 xl:order-2">
+        <Card className="w-[95%] h-[40%] xl:h-96 mx-auto mb-4 bg-transparent backdrop-blur-sm shadow-[0_0_50px_purple]">
           <ChartData />
         </Card>
 
-        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
+        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple]">
           <List>
             {pageInfo.map((player) => (
               <ListItem
                 key={player.rank}
                 className=" hover:bg-indigo-300 focus:bg-purple-400"
               >
-                <div className="flex lg:flex-row flex-col items-center text-center w-1/3">
+                <div className="flex xl:flex-row flex-col items-center text-center w-1/3">
                   <Avatar
                     variant="rounded"
                     src={`${player.img}.png`}
-                    className="mx-auto lg:mx-1"
+                    className="mx-auto xl:mx-1"
                   />
                   <div>
                     <Typography
@@ -198,6 +180,49 @@ export default function MainSection() {
               </div>
             </div>
           </CardFooter>
+        </Card>
+      </section>
+
+      <section className="grid grid-cols-1 justify-start pb-8 mt-20 xl:mt-0 xl:pb-8 xl:pt-0 relative order-3 xl:order-3 mx-auto">
+        <Card className="sticky top-0 h-2 bg-transparent">
+          <List className="grid grid-cols-1px-0 pb-8 mx-0">
+            {ExtremePlayer.map((dev) => (
+              <ListItem
+                key={dev.id}
+                className="hover:bg-transparent cursor-default focus:bg-transparent py-1"
+              >
+                <ListItemPrefix className="shrink-0">
+                  <Avatar
+                    variant="circular"
+                    alt="candice"
+                    src={`${dev.img}`}
+                    size="sm"
+                    withBorder={true}
+                    className="p-0.5"
+                    color="light-blue"
+                  />
+                </ListItemPrefix>
+
+                <div>
+                  <Typography
+                    variant="sm"
+                    color="blue"
+                    className="font-normal text-sm"
+                  >
+                    {dev.name}
+                  </Typography>
+
+                  <Typography
+                    variant="small"
+                    color="blue"
+                    className="font-normal"
+                  >
+                    {dev.mark}
+                  </Typography>
+                </div>
+              </ListItem>
+            ))}
+          </List>
         </Card>
       </section>
     </section>
