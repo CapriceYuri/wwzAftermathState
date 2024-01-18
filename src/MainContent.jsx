@@ -46,7 +46,7 @@ export default function MainSection() {
     <section className="grid grid-cols-2 xl:grid-cols-4 relative">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
 
-      <section className="grid grid-cols-1 justify-start pb-8 mt-5 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
+      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
             {HordePlayer.map((dev, index) => (
@@ -95,22 +95,18 @@ export default function MainSection() {
           />
           <div className="absolute h-full w-full bg-gradient-to-t to-purple-900 from-red-400 opacity-80 rounded-xl" />
           <nav className="z-50 h-full">
-            <ul className="flex flex-row w-full h-full my-auto justify-evenly place-items-center">
-              <li className="animate-bounce">
+            <ul className="grid grid-cols-3 h-full justify-evenly place-items-center">
+              <li>
                 <a
                   href="https://capriceyuri.github.io/wwzAftermathPerks/"
                   target="_blank"
                 >
-                  <Typography
-                    color="orange"
-                    variant="h6"
-                    className="border-2 border-indigo-200 p-1 rounded-xl"
-                  >
+                  <Typography color="orange" variant="h6" className="p1">
                     Classes & Perks
                   </Typography>
                 </a>
               </li>
-              <li className="animate-bounce">
+              <li>
                 <a
                   href="https://capriceyuri.github.io/wwzAftermathHorde/"
                   target="_blank"
@@ -118,22 +114,18 @@ export default function MainSection() {
                   <Typography
                     color="orange"
                     variant="h6"
-                    className="border-2 border-indigo-200 p-1 rounded-xl"
+                    className="border-indigo-200"
                   >
                     Horde Ranking
                   </Typography>
                 </a>
               </li>
-              <li className="animate-bounce">
+              <li>
                 <a
                   href="https://capriceyuri.github.io/wwzAftermathExtreme/"
                   target="_blank"
                 >
-                  <Typography
-                    color="orange"
-                    variant="h6"
-                    className="border-2 border-indigo-200 p-1 rounded-xl"
-                  >
+                  <Typography color="orange" variant="h6" className="p1">
                     Speedrun Ranking
                   </Typography>
                 </a>
@@ -303,7 +295,7 @@ export default function MainSection() {
           <div className="flex items-center gap-4"></div>
         </Card>
 
-        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
+        <Card className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
           <img
             src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl absolute -z-10"
@@ -425,7 +417,7 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="grid grid-cols-1 justify-start pb-8 mt-5 xl:pb-8 xl:pt-0 relative order-3 xl:order-3 mx-auto">
+      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative order-3 xl:order-3 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
             {ExtremePlayer.map((dev, index) => (
