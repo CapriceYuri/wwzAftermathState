@@ -93,16 +93,18 @@ export default function MainSection() {
       </section>
 
       <section className="py-5 col-span-2 order-1 xl:order-2">
-        <Card className="w-[95%] h-80 mx-auto mb-4 bg-transparent backdrop-blur-sm shadow-[0_0_20px_purple] relative">
+        <Card
+          className="w-[95%] h-56 mx-auto mb-4 bg-transparent"
+          shadow={false}
+        ></Card>
+
+        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
           <img
             src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl absolute -z-10"
           />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-500 opacity-60 rounded-xl"></div>
-        </Card>
-
-        <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
-          <List>
+          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl"></div>
+          <List className="z-50">
             {pageInfo.map((player) => (
               <ListItem
                 key={player.rank}
