@@ -46,12 +46,12 @@ export default function MainSection() {
   };
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-4">
+    <section className="grid grid-cols-1 lg:grid-cols-4 relative">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
 
-      <section className="grid grid-cols-1 w-full justify-start pb-8 mt-20 lg:mt-0 lg:pb-8 lg:pt-0 relative order-2 lg:order-1">
-        <Card className="w-full sticky top-0 bg-transparent">
-          <List className="grid grid-cols-2 lg:grid-cols-1 gap-x-8 p-2 mx-auto">
+      <section className="grid grid-cols-1 w-full justify-start pb-8 mt-20 lg:mt-0 lg:pb-8 lg:pt-0 relative order-2 lg:order-1 ">
+        <Card className="w-full sticky top-0 h-2 bg-transparent">
+          <List className="grid grid-cols-2 lg:grid-cols-1 gap-x-8 px-2 pb-8 mx-auto">
             {DevData.map((dev) => (
               <ListItem
                 key={dev.id}

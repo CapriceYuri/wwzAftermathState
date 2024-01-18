@@ -63,7 +63,7 @@ export const DevData = [
     type: 3,
   },
   {
-    id: 9,
+    id: 10,
     img: "player-siberia",
     name: "Cool Guy",
     mark: "Tokyo Drifter",
