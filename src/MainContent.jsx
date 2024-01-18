@@ -44,9 +44,9 @@ export default function MainSection() {
 
   return (
     <section className="grid grid-cols-2 xl:grid-cols-4 relative">
-      <img src="bgtesting.png" className="fixed h-dvh w-full object-cover" />
+      <img src="bgtesting.png" className="fixed h-full w-full object-cover" />
 
-      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
+      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative mt-5 order-2 xl:order-1 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
             {HordePlayer.map((dev, index) => (
@@ -116,7 +116,7 @@ export default function MainSection() {
                     variant="h6"
                     className="border-indigo-200"
                   >
-                    Horde Ranking
+                    Horde
                   </Typography>
                 </a>
               </li>
@@ -126,7 +126,7 @@ export default function MainSection() {
                   target="_blank"
                 >
                   <Typography color="orange" variant="h6" className="p1">
-                    Speedrun Ranking
+                    Speedrun
                   </Typography>
                 </a>
               </li>
@@ -417,7 +417,7 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative order-3 xl:order-3 mx-auto">
+      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative mt-5 order-3 xl:order-3 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
             {ExtremePlayer.map((dev, index) => (
