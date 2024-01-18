@@ -87,6 +87,47 @@ export default function MainSection() {
       </section>
 
       <section className="py-5 col-span-2 order-1 xl:order-2">
+        <Card className="w-[95%] sticky top-0 h-16 mb-4 mx-auto bg-transparent z-50">
+          <img
+            src="placeholder3.png"
+            className="h-full w-full object-cover rounded-2xl absolute"
+          />
+          <div className="absolute h-full w-full bg-gradient-to-t to-purple-900 from-red-400 opacity-80 rounded-xl" />
+          <nav className="z-50 h-full">
+            <ul className="flex flex-row w-full h-full my-auto justify-evenly place-items-center">
+              <li className="animate-bounce">
+                <a
+                  href="https://capriceyuri.github.io/wwzAftermathPerks/"
+                  target="_blank"
+                >
+                  <Typography color="orange" variant="h6">
+                    Classes & Perks
+                  </Typography>
+                </a>
+              </li>
+              <li className="animate-bounce">
+                <a
+                  href="https://capriceyuri.github.io/wwzAftermathHorde/"
+                  target="_blank"
+                >
+                  <Typography color="orange" variant="h6">
+                    Horde Ranking
+                  </Typography>
+                </a>
+              </li>
+              <li className="animate-bounce">
+                <a
+                  href="https://capriceyuri.github.io/wwzAftermathExtreme/"
+                  target="_blank"
+                >
+                  <Typography color="orange" variant="h6">
+                    Speedrun Ranking
+                  </Typography>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </Card>
         <Card
           className="w-[95%] h-56 mx-auto mb-4 bg-transparent"
           shadow={false}
@@ -96,12 +137,12 @@ export default function MainSection() {
             className="h-full w-full object-cover rounded-2xl absolute"
           />
           <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
-          <div className="z-50">
+          <div className="z-40">
             <Typography variant="h5" color="orange" className="text-center p-2">
               LATEST
             </Typography>
           </div>
-          <div className="grid grid-cols-1 z-50 place-items-center my-auto">
+          <div className="grid grid-cols-1 z-40 place-items-center my-auto">
             <div className="flex flex-col items-center">
               <Avatar
                 src="player-SiberianPsych0.png"
