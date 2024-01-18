@@ -47,7 +47,7 @@ export default function MainSection() {
   };
 
   return (
-    <section className="grid grid-cols-1 xl:grid-cols-4 relative">
+    <section className="grid grid-cols-2 xl:grid-cols-4 relative">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
 
       <section className="grid grid-cols-1 justify-start pb-8 mt-20 xl:mt-0 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
@@ -66,14 +66,14 @@ export default function MainSection() {
                     size="sm"
                     withBorder={true}
                     className="p-0.5"
-                    color="deep-orange"
+                    color={dev.id > 10 ? "green" : "deep-orange"}
                   />
                 </ListItemPrefix>
 
                 <div>
                   <Typography
                     variant="sm"
-                    color="red"
+                    color={dev.id > 10 ? "green" : "deep-orange"}
                     className="font-semibold text-sm"
                   >
                     {dev.name}
@@ -81,7 +81,7 @@ export default function MainSection() {
 
                   <Typography
                     variant="small"
-                    color="red"
+                    color={dev.id > 10 ? "green" : "deep-orange"}
                     className="font-normal"
                   >
                     {dev.mark}

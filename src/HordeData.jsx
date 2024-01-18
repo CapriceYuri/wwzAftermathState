@@ -59,4 +59,40 @@ export const HordePlayer = [
     name: "蕉鹿梦",
     mark: "Maobai Pro",
   },
+  {
+    id: 11,
+    img: "players/player-wintersky.png",
+    name: "Wintersky",
+    mark: "Horde Legends",
+  },
+  {
+    id: 12,
+    img: "players/player-gogu.jpg",
+    name: "gogu7382",
+    mark: "Horde Legends",
+  },
+  {
+    id: 13,
+    img: "players/player-Fiction.png",
+    name: "XxFriction",
+    mark: "Horde Legends",
+  },
+  {
+    id: 14,
+    img: "players/player-cris.png",
+    name: "Crispokringle",
+    mark: "Horde Legends",
+  },
+  {
+    id: 15,
+    img: "players/player-hirunknown.png",
+    name: "HiRUnknown",
+    mark: "Horde Legends",
+  },
+  {
+    id: 16,
+    img: "players/player-yupitsmeh.png",
+    name: "YupItsMeh",
+    mark: "Horde Legends",
+  },
 ];
