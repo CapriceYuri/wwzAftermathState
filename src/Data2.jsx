@@ -1,8 +1,8 @@
-export const PlayerData = [
+export const TestData = [
   {
     id: "1",
     img: "player-X",
-    name: "Caprice Yuri",
+    name: "Haru",
     map: "New York 1",
     diff: "Extreme",
     src: "https://www.youtube.com/",
@@ -17,7 +17,7 @@ export const PlayerData = [
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=s7mesGq4_hc",
     type: "Exterminator",
-    time: 1186,
+    time: 60,
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ export const PlayerData = [
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=RToV-UtGn9M",
     type: "Slasher",
-    time: 975,
+    time: 60,
   },
   {
     id: "4",
@@ -37,7 +37,7 @@ export const PlayerData = [
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=KdxxOMu8yWI",
     type: "Slasher",
-    time: 992,
+    time: 60,
   },
   {
     id: "5",
@@ -47,7 +47,7 @@ export const PlayerData = [
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=bp1FIrgrUGo&t=4s",
     type: "Fixer",
-    time: 791,
+    time: 60,
   },
   {
     id: "6",
@@ -57,6 +57,6 @@ export const PlayerData = [
     diff: "Challenge Mode [Hard]",
     src: "https://www.youtube.com/watch?v=rYTNJCAL-XM",
     type: "Gunslinger",
-    time: 1110,
+    time: 60,
   },
 ];

@@ -6,18 +6,39 @@ import {
   Card,
   Typography,
   CardFooter,
-  Button,
-  IconButton,
 } from "@material-tailwind/react";
+
+import React from "react";
+import { IconButton } from "@material-tailwind/react";
+import { useState } from "react";
 
 import { PlayerData } from "./Data";
 import { DevData } from "./LeftData";
 import ChartData from "./Chart";
-import { Pagination } from "./Pagination";
+
+import { TestData } from "./Data2";
 
 const sortedData = PlayerData.sort((a, b) => (a.time > b.time ? 1 : -1));
+const sortedData2 = TestData.sort((a, b) => (a.time > b.time ? 1 : -1));
+
+const allData = [sortedData, sortedData2];
 
 export default function MainSection() {
+  const [active, setActive] = useState(1);
+  const [pageInfo, setPageInfo] = useState(allData[0]);
+
+  const handleClick = () => {
+    setPageInfo(allData[1]);
+  };
+
+  const getItemProps = (index) => ({
+    variant: active === index ? "filled" : "text",
+    color: "white",
+    onClick: () => {
+      setActive(index);
+      setPageInfo(allData[index - 1]);
+    },
+  });
   const conversion = (sec) => {
     let min = Math.trunc(sec / 60);
     let reminder = sec % 60;
@@ -28,31 +49,57 @@ export default function MainSection() {
     <section className="grid grid-cols-1 lg:grid-cols-4">
       <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
 
-      <section className="grid grid-cols-1 items-start pb-8 pt-12 lg:pb-8 lg:pt-0 relative order-2 lg:order-1">
-        <Card className="lg:w-[80%] w-5/6 mx-auto sticky top-0 bg-transparent">
-          <List>
+      <section className="grid grid-cols-1 w-full justify-start pb-8 mt-20 lg:mt-0 lg:pb-8 lg:pt-0 relative order-2 lg:order-1">
+        <Card className="w-full sticky top-0 bg-transparent">
+          <List className="grid grid-cols-2 lg:grid-cols-1 gap-x-8 p-2 mx-auto">
             {DevData.map((dev) => (
               <ListItem
                 key={dev.id}
-                className="hover:bg-transparent cursor-default focus:bg-transparent p-2"
+                className="hover:bg-transparent cursor-default focus:bg-transparent py-1"
               >
-                <ListItemPrefix className="shrink-0">
+                <ListItemPrefix className="shrink-0 ms-2">
                   <Avatar
                     variant="circular"
                     alt="candice"
                     src={`${dev.img}.png`}
-                    className="shrink-0"
+                    size="sm"
+                    withBorder={true}
+                    color="orange"
                   />
                 </ListItemPrefix>
 
                 <div>
-                  <Typography variant="h6" color="white">
+                  <Typography
+                    variant="sm"
+                    color={
+                      dev.type === 1
+                        ? "purple"
+                        : dev.type === 9
+                        ? "red"
+                        : dev.type === 3
+                        ? "green"
+                        : dev.type === 4
+                        ? "blue"
+                        : "pink"
+                    }
+                    className="font-normal"
+                  >
                     {dev.name}
                   </Typography>
 
                   <Typography
                     variant="small"
-                    color={dev.special === 1 ? "red" : "amber"}
+                    color={
+                      dev.type === 1
+                        ? "purple"
+                        : dev.type === 9
+                        ? "red"
+                        : dev.type === 3
+                        ? "green"
+                        : dev.type === 4
+                        ? "blue"
+                        : "pink"
+                    }
                     className="font-normal"
                   >
                     {dev.mark}
@@ -71,12 +118,12 @@ export default function MainSection() {
 
         <Card className="w-[95%] mx-auto mt-8 bg-transparent backdrop-blur-lg shadow-[0_0_50px_purple]">
           <List>
-            {sortedData.map((player) => (
+            {pageInfo.map((player) => (
               <ListItem
                 key={player.rank}
                 className=" hover:bg-indigo-300 focus:bg-purple-400"
               >
-                <div className="flex lg:flex-row flex-col text-center w-1/3">
+                <div className="flex lg:flex-row flex-col items-center text-center w-1/3">
                   <Avatar
                     variant="rounded"
                     src={`${player.img}.png`}
@@ -89,14 +136,6 @@ export default function MainSection() {
                       className="font-bold"
                     >
                       {player.name}
-                    </Typography>
-
-                    <Typography
-                      variant="small"
-                      color="cyan"
-                      className="font-normal"
-                    >
-                      {player.mark}
                     </Typography>
                   </div>
                 </div>
@@ -152,7 +191,12 @@ export default function MainSection() {
             ))}
           </List>
           <CardFooter>
-            <Pagination />
+            <div className="flex justify-between items-center gap-4">
+              <div className="flex items-center gap-1">
+                <IconButton {...getItemProps(1)}>1</IconButton>
+                <IconButton {...getItemProps(2)}>2</IconButton>
+              </div>
+            </div>
           </CardFooter>
         </Card>
       </section>
