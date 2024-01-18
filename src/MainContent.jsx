@@ -44,7 +44,7 @@ export default function MainSection() {
 
   return (
     <section className="grid grid-cols-2 xl:grid-cols-4 relative">
-      <img src="bgtesting.png" className="fixed h-lvh w-full object-cover" />
+      <img src="bgtesting.png" className="fixed h-dvh w-full object-cover" />
 
       <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative order-2 xl:order-1 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
@@ -102,7 +102,7 @@ export default function MainSection() {
                   target="_blank"
                 >
                   <Typography color="orange" variant="h6" className="p1">
-                    Classes & Perks
+                    Perks
                   </Typography>
                 </a>
               </li>
