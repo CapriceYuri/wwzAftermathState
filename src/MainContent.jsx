@@ -88,7 +88,7 @@ export default function MainSection() {
       </section>
 
       <section className="py-5 col-span-2 order-1 xl:order-2">
-        <Card className="w-[95%] sticky top-0 h-16 mb-4 mx-auto bg-transparent z-50">
+        <Card className="w-[95%] h-16 mb-4 mx-auto bg-transparent z-50">
           <img
             src="placeholder3.png"
             className="h-full w-full object-cover rounded-2xl absolute"
@@ -101,7 +101,11 @@ export default function MainSection() {
                   href="https://capriceyuri.github.io/wwzAftermathPerks/"
                   target="_blank"
                 >
-                  <Typography color="orange" variant="h6">
+                  <Typography
+                    color="orange"
+                    variant="h6"
+                    className="border-2 border-indigo-200 p-1 rounded-xl"
+                  >
                     Classes & Perks
                   </Typography>
                 </a>
@@ -111,7 +115,11 @@ export default function MainSection() {
                   href="https://capriceyuri.github.io/wwzAftermathHorde/"
                   target="_blank"
                 >
-                  <Typography color="orange" variant="h6">
+                  <Typography
+                    color="orange"
+                    variant="h6"
+                    className="border-2 border-indigo-200 p-1 rounded-xl"
+                  >
                     Horde Ranking
                   </Typography>
                 </a>
@@ -121,7 +129,11 @@ export default function MainSection() {
                   href="https://capriceyuri.github.io/wwzAftermathExtreme/"
                   target="_blank"
                 >
-                  <Typography color="orange" variant="h6">
+                  <Typography
+                    color="orange"
+                    variant="h6"
+                    className="border-2 border-indigo-200 p-1 rounded-xl"
+                  >
                     Speedrun Ranking
                   </Typography>
                 </a>
@@ -142,7 +154,7 @@ export default function MainSection() {
           <div className="grid grid-cols-1 z-40 my-auto">
             <Carousel
               className="rounded-xl"
-              transition={{ duration: 1 }}
+              transition={{ duration: 2 }}
               loop={true}
               autoplay={true}
             >
