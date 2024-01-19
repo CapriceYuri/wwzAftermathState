@@ -96,7 +96,7 @@ export default function MainSection() {
             shadow={false}
           >
             <img
-              src="placeholder2.png"
+              src="placeholder3.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
