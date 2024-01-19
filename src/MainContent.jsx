@@ -93,7 +93,7 @@ export default function MainSection() {
         </Card>
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[100%] gap-x-2">
           <Card
-            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_40px_purple] relative"
+            className="w-[100%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_40px_purple] relative"
             shadow={false}
           >
             <img
@@ -132,7 +132,7 @@ export default function MainSection() {
             </div>
           </Card>
           <Card
-            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_40px_purple] relative"
+            className="w-[100%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_40px_purple] relative"
             shadow={false}
           >
             <img
@@ -283,7 +283,7 @@ export default function MainSection() {
         </Card>
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[100%] gap-x-2">
           <Card
-            className="w-[95%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
+            className="w-[100%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
             shadow={false}
           >
             <img
@@ -322,7 +322,7 @@ export default function MainSection() {
             </div>
           </Card>
           <Card
-            className="w-[95%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
+            className="w-[100%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
             shadow={false}
           >
             <img
