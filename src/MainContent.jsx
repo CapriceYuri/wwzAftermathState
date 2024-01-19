@@ -77,7 +77,11 @@ export default function MainSection() {
               {links.map((link) => (
                 <li>
                   <a href={link.src} target="_blank">
-                    <Typography color="white" variant="h6">
+                    <Typography
+                      color="white"
+                      variant="h6"
+                      className="hover:text-black"
+                    >
                       {link.title}
                     </Typography>
                   </a>
@@ -107,15 +111,15 @@ export default function MainSection() {
                         size="xl"
                         withBorder={true}
                         className="p-0.5"
-                        color="amber"
+                        color="deep-orange"
                       />
                       <div>
-                        <Typography variant="h4" color="amber">
+                        <Typography variant="h4" color="white">
                           {player.name}
                         </Typography>
                         <Typography
                           variant="h6"
-                          color="cyan"
+                          color="deep-orange"
                           className="font-semibold"
                           children={player.mark}
                         ></Typography>
@@ -146,15 +150,15 @@ export default function MainSection() {
                         size="xl"
                         withBorder={true}
                         className="p-0.5"
-                        color="amber"
+                        color="blue"
                       />
                       <div>
-                        <Typography variant="h4" color="amber">
+                        <Typography variant="h4" color="white">
                           {player.name}
                         </Typography>
                         <Typography
                           variant="h6"
-                          color="cyan"
+                          color="light-blue"
                           className="font-semibold"
                           children={player.mark}
                         ></Typography>
