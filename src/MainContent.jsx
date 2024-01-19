@@ -56,10 +56,10 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-4 relative h-dvh overflow-x-hidden">
+    <section className="grid grid-cols-4 relative h-lvh overflow-x-hidden">
       <img
         src="bgtesting.png"
-        className="fixed h-dvh w-full object-cover -z-10"
+        className="fixed h-lvh w-full object-cover -z-10"
       />
 
       <section className="py-5 col-span-4">
