@@ -49,7 +49,7 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-2 xl:grid-cols-4 relative overflow-x-hidden h-full">
+    <section className="grid grid-cols-2 xl:grid-cols-4 relative overflow-x-hidden">
       <img src="bgtesting.png" className="fixed h-full w-full object-cover" />
 
       <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto">
