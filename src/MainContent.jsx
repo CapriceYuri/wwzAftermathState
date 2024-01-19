@@ -49,13 +49,13 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-2 xl:grid-cols-5 relative h-lvh">
+    <section className="grid grid-cols-2 xl:grid-cols-5 relative h-dvh">
       <img
         src="bgtesting.png"
-        className="fixed h-lvh w-full object-cover -z-10"
+        className="fixed h-dvh w-full object-cover -z-10"
       />
 
-      <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto w-full h-full">
+      <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto w-full">
         <Card
           className="relative lg:sticky lg:top-0 h-full xl:h-1/2 bg-transparent"
           shadow={false}
@@ -99,7 +99,7 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="py-5 col-span-3 order-1 xl:order-2 h-full">
+      <section className="py-5 col-span-3 order-1 xl:order-2">
         <Card
           className="w-[95%] h-16 mb-4 mx-auto bg-transparent shadow-[0_0_20px_indigo]"
           shadow={false}
@@ -109,7 +109,7 @@ export default function MainSection() {
             className="h-full w-full object-cover rounded-2xl absolute"
           />
           <div className="absolute h-full w-full bg-gradient-to-t to-purple-900 from-red-400 opacity-80 rounded-xl" />
-          <nav className="h-full mix-blend-overlay">
+          <nav className="h-full mix">
             <ul className="grid grid-cols-3 h-full justify-evenly place-items-center">
               <li>
                 <a
@@ -419,7 +419,7 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="grid grid-cols-1 relative order-3 mx-auto w-full h-full">
+      <section className="grid grid-cols-1 relative order-3 mx-auto w-full">
         <Card
           className="relative xl:sticky xl:top-0 h-full xl:h-1/2 bg-transparent"
           shadow={false}
