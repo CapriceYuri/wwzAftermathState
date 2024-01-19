@@ -193,9 +193,9 @@ export default function MainSection() {
               {pageInfo.mutators.map((mute) => (
                 <div>
                   <Typography
-                    color="pink"
+                    color="amber"
                     variant="h6"
-                    className="font-semibold text-md"
+                    className="font-semibold text-lg p-2 border-4 rounded-full border-red-600 text-center"
                     children={mute}
                   ></Typography>
                 </div>
