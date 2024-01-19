@@ -56,13 +56,13 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-4 relative h-lvh overflow-x-hidden">
+    <section className="grid grid-cols-4 relative h-dvh overflow-x-hidden">
       <img
         src="bgtesting.png"
-        className="fixed h-lvh w-full object-cover -z-10"
+        className="fixed h-dvh w-full object-cover -z-10"
       />
 
-      <section className="py-5 col-span-4 w-[90%] mx-auto">
+      <section className="py-5 col-span-4">
         <Card
           className="w-[90%] h-16 mb-4 mx-auto bg-transparent shadow-[0_0_20px_indigo]"
           shadow={false}
@@ -88,7 +88,7 @@ export default function MainSection() {
         </Card>
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[90%]">
           <Card
-            className="w-[90%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_20px_red] relative"
+            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_20px_red] relative"
             shadow={false}
           >
             <img
@@ -127,7 +127,7 @@ export default function MainSection() {
             </div>
           </Card>
           <Card
-            className="w-[90%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_20px_red] relative"
+            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_20px_red] relative"
             shadow={false}
           >
             <img
@@ -168,7 +168,7 @@ export default function MainSection() {
         </div>
 
         <Card
-          className="w-[90%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
+          className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
           shadow={false}
         >
           <img
