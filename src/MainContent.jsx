@@ -49,10 +49,10 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-2 xl:grid-cols-5 relative h-dvh">
+    <section className="grid grid-cols-2 xl:grid-cols-5 relative h-lvh overflow-x-hidden">
       <img
         src="bgtesting.png"
-        className="fixed h-dvh w-full object-cover -z-10"
+        className="fixed h-lvh w-full object-cover -z-10"
       />
 
       <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto w-full">
