@@ -1,5 +1,4 @@
 import MainSection from "./MainContent";
-import { Footer } from "./FooterContent";
 
 function App() {
   return (
