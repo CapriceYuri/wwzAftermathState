@@ -19,14 +19,19 @@ import { HordePlayer } from "./HordeData";
 
 import { TestData } from "./Data2";
 
+// Required Imports
+
 const sortedData = PlayerData.sort((a, b) => (a.time > b.time ? 1 : -1));
 const sortedData2 = TestData.sort((a, b) => (a.time > b.time ? 1 : -1));
 
 const allData = [sortedData, sortedData2];
 
+// Data Assortment
+
 export default function MainSection() {
   const [active, setActive] = useState(1);
   const [pageInfo, setPageInfo] = useState(allData[0]);
+  // Hooks - Functionality
 
   const getItemProps = (index) => ({
     variant: active === index ? "filled" : "text",
@@ -42,8 +47,10 @@ export default function MainSection() {
     return `${min}m ${reminder}s`;
   };
 
+  // Functions & Callbacks
+
   return (
-    <section className="py-[10px] grid grid-cols-2 xl:grid-cols-4 relative">
+    <section className="py-[10px] grid grid-cols-2 xl:grid-cols-4 relative overflow-x-hidden">
       <img src="bgtesting.png" className="fixed h-full w-full object-cover" />
 
       <section className="grid grid-cols-1 justify-start relative order-2 xl:order-1 mx-auto">
