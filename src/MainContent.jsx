@@ -49,15 +49,15 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-2 xl:grid-cols-4 relative overflow-x-hidden h-lvh">
+    <section className="grid grid-cols-2 xl:grid-cols-4 relative h-lvh">
       <img
         src="bgtesting.png"
-        className="fixed min-h-lvh w-full object-cover"
+        className="fixed min-h-lvh w-full object-cover -z-10"
       />
 
       <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto w-full">
         <Card
-          className="xl:sticky xl:top-0 h-1/2 bg-transparent"
+          className="lg:sticky lg:top-0 h-lvh bg-transparent"
           shadow={false}
         >
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 mx-auto">
@@ -99,7 +99,7 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="py-5 col-span-2 order-1 xl:order-2">
+      <section className="py-5 col-span-2 order-1 xl:order-2 h-full">
         <Card
           className="w-[95%] h-16 mb-4 mx-auto bg-transparent z-50 shadow-[0_0_20px_indigo]"
           shadow={false}
@@ -149,7 +149,7 @@ export default function MainSection() {
           </nav>
         </Card>
         <Card
-          className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_20px_red]"
+          className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_20px_red] relative"
           shadow={false}
         >
           <img
@@ -310,12 +310,12 @@ export default function MainSection() {
         </Card>
 
         <Card
-          className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_35px_purple]"
+          className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_35px_purple] relative"
           shadow={false}
         >
           <img
             src="placeholder.png"
-            className="h-full w-full object-cover rounded-2xl absolute -z-10"
+            className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
           <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl"></div>
           <List className="z-50">
@@ -422,7 +422,7 @@ export default function MainSection() {
 
       <section className="grid grid-cols-1 relative order-3 mx-auto w-full">
         <Card
-          className="xl:sticky xl:top-0 h-1/2 w-full bg-transparent"
+          className="xl:sticky xl:top-0 h-lvh w-full bg-transparent"
           shadow={false}
         >
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 mx-auto">

@@ -55,5 +55,14 @@ export const PlayerData = {
       type: "Gunslinger",
       time: 784,
     },
+    {
+      img: "player-玉米大战僵尸",
+      name: "玉米大战僵尸",
+      map: "Descent",
+      diff: "Challenge [Hard]",
+      src: "https://www.bilibili.com/video/BV1Yi4y1i7eG/",
+      type: "Slasher",
+      time: 963,
+    },
   ],
 };
