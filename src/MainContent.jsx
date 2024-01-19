@@ -95,7 +95,7 @@ export default function MainSection() {
       </section>
 
       <section className="py-5 col-span-2 order-1 xl:order-2">
-        <Card className="w-[90%] h-16 mb-4 mx-auto bg-transparent z-50">
+        <Card className="w-[95%] h-16 mb-4 mx-auto bg-transparent z-50">
           <img
             src="placeholder3.png"
             className="h-full w-full object-cover rounded-2xl absolute"
@@ -141,7 +141,7 @@ export default function MainSection() {
           </nav>
         </Card>
         <Card
-          className="w-[90%] h-56 mx-auto mb-4 bg-transparent"
+          className="w-[95%] h-56 mx-auto mb-4 bg-transparent"
           shadow={false}
         >
           <img
@@ -301,7 +301,7 @@ export default function MainSection() {
           </div>
         </Card>
 
-        <Card className="w-[90%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
+        <Card className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
           <img
             src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl absolute -z-10"
