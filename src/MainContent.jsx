@@ -43,16 +43,16 @@ export default function MainSection() {
   };
 
   return (
-    <section className="grid grid-cols-2 xl:grid-cols-4 relative">
+    <section className="py-[10px] grid grid-cols-2 xl:grid-cols-4 relative">
       <img src="bgtesting.png" className="fixed h-full w-full object-cover" />
 
-      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative mt-5 order-2 xl:order-1 mx-auto">
+      <section className="grid grid-cols-1 justify-start relative order-2 xl:order-1 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
-          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
+          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1">
             {HordePlayer.map((dev, index) => (
               <ListItem
                 key={index}
-                className="hover:bg-transparent cursor-default focus:bg-transparent py-1"
+                className="hover:bg-transparent cursor-default focus:bg-transparent py-0.5"
               >
                 <ListItemPrefix className="shrink-0">
                   <Avatar
@@ -292,7 +292,6 @@ export default function MainSection() {
               </div>
             </Carousel>
           </div>
-          <div className="flex items-center gap-4"></div>
         </Card>
 
         <Card className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
@@ -417,13 +416,13 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="grid grid-cols-1 justify-start pb-8 xl:pb-8 xl:pt-0 relative mt-5 order-3 xl:order-3 mx-auto">
+      <section className="grid grid-cols-1 justify-start relative order-3 xl:order-3 mx-auto">
         <Card className="sticky top-0 h-2 bg-transparent">
-          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 px-0 pb-8 mx-0">
+          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1">
             {ExtremePlayer.map((dev, index) => (
               <ListItem
                 key={index}
-                className="hover:bg-transparent cursor-default focus:bg-transparent py-1"
+                className="hover:bg-transparent cursor-default focus:bg-transparent py-0.5"
               >
                 <ListItemPrefix className="shrink-0">
                   <Avatar
