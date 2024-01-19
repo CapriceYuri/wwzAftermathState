@@ -13,19 +13,18 @@ import React from "react";
 import { IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 
-import { PlayerData } from "./Data";
-import { ExtremePlayer } from "./ExtremeData";
-import { HordePlayer } from "./HordeData";
+import { PlayerData } from "./DataFile/Data";
+import { ExtremePlayer } from "./DataFile/ExtremeData";
+import { HordePlayer } from "./DataFile/HordeData";
 
-import { TestData } from "./Data2";
+import { TestData } from "./DataFile/Data2";
 
 // Required Imports
 
-const sortedData = PlayerData.sort((a, b) => (a.time > b.time ? 1 : -1));
-const sortedData2 = TestData.sort((a, b) => (a.time > b.time ? 1 : -1));
+PlayerData.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
+TestData.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
 
-const allData = [sortedData, sortedData2];
-
+const allData = [PlayerData, TestData];
 // Data Assortment
 
 export default function MainSection() {
@@ -54,7 +53,7 @@ export default function MainSection() {
       <img src="bgtesting.png" className="fixed h-full w-full object-cover" />
 
       <section className="grid grid-cols-1 justify-start relative order-2 xl:order-1 mx-auto">
-        <Card className="sticky top-0 h-2 bg-transparent">
+        <Card className="sticky top-0 h-2 bg-transparent" shadow={false}>
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1">
             {HordePlayer.map((dev, index) => (
               <ListItem
@@ -95,7 +94,10 @@ export default function MainSection() {
       </section>
 
       <section className="py-5 col-span-2 order-1 xl:order-2">
-        <Card className="w-[95%] h-16 mb-4 mx-auto bg-transparent z-50">
+        <Card
+          className="w-[95%] h-16 mb-4 mx-auto bg-transparent z-50 shadow-[0_0_20px_indigo]"
+          shadow={false}
+        >
           <img
             src="placeholder3.png"
             className="h-full w-full object-cover rounded-2xl absolute"
@@ -141,7 +143,7 @@ export default function MainSection() {
           </nav>
         </Card>
         <Card
-          className="w-[95%] h-56 mx-auto mb-4 bg-transparent"
+          className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_20px_red]"
           shadow={false}
         >
           <img
@@ -301,7 +303,10 @@ export default function MainSection() {
           </div>
         </Card>
 
-        <Card className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_20px_purple]">
+        <Card
+          className="w-[95%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_35px_purple]"
+          shadow={false}
+        >
           <img
             src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl absolute -z-10"
@@ -316,33 +321,19 @@ export default function MainSection() {
                 children="LEADERBOARD"
               ></Typography>
             </div>
-            <div className="flex flex-row justify-center gap-2">
-              <div>
-                <Typography
-                  color="white"
-                  variant="small"
-                  className="font-normal p-2 bg-black rounded-2xl"
-                  children="Rookie"
-                ></Typography>
-              </div>
-              <div>
-                <Typography
-                  color="white"
-                  variant="small"
-                  className="font-normal p-2 bg-black rounded-2xl"
-                  children="Looting Is a Crime"
-                ></Typography>
-              </div>
-              <div>
-                <Typography
-                  color="white"
-                  variant="small"
-                  className="font-normal p-2 bg-black rounded-2xl"
-                  children="Shaky Hands"
-                ></Typography>
-              </div>
+            <div className="flex flex-row justify-evenly gap-2">
+              {pageInfo.mutators.map((mute) => (
+                <div>
+                  <Typography
+                    color="pink"
+                    variant="h6"
+                    className="font-semibold text-md"
+                    children={mute}
+                  ></Typography>
+                </div>
+              ))}
             </div>
-            {pageInfo.map((player, index) => (
+            {pageInfo.runs.map((player, index) => (
               <ListItem
                 key={index}
                 className=" hover:bg-indigo-300 focus:bg-purple-400"
@@ -424,7 +415,7 @@ export default function MainSection() {
       </section>
 
       <section className="grid grid-cols-1 justify-start relative order-3 xl:order-3 mx-auto">
-        <Card className="sticky top-0 h-2 bg-transparent">
+        <Card className="sticky top-0 h-2 bg-transparent" shadow={false}>
           <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1">
             {ExtremePlayer.map((dev, index) => (
               <ListItem
