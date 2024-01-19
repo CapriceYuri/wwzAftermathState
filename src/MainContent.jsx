@@ -64,7 +64,7 @@ export default function MainSection() {
 
       <section className="col-span-4 2xl:col-start-2">
         <Card
-          className="w-[100%] h-16 mb-4 mx-auto bg-transparent shadow-[0_0_20px_indigo]"
+          className="w-[100%] h-16 mb-4 mx-auto bg-transparent shadow-[0_0_50px_purple]"
           shadow={false}
         >
           <img
@@ -92,7 +92,7 @@ export default function MainSection() {
         </Card>
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[100%] gap-x-2">
           <Card
-            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_10px_red] relative"
+            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_40px_purple] relative"
             shadow={false}
           >
             <img
@@ -131,7 +131,7 @@ export default function MainSection() {
             </div>
           </Card>
           <Card
-            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_10px_red] relative"
+            className="w-[95%] h-56 mx-auto mb-4 bg-transparent shadow-[0_0_40px_purple] relative"
             shadow={false}
           >
             <img
