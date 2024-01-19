@@ -49,10 +49,10 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-1 xl:grid-cols-4 relative overflow-x-hidden">
+    <section className="grid grid-cols-2 xl:grid-cols-4 relative overflow-x-hidden h-full">
       <img src="bgtesting.png" className="fixed h-dvh w-full object-cover" />
 
-      <section className="grid grid-cols-1 justify-start relative order-2 xl:order-1 mx-auto">
+      <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto">
         <Card
           className="xl:sticky xl:top-0 h-full bg-transparent"
           shadow={false}
@@ -96,7 +96,7 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="py-5 col-span-3 xl:col-span-2 order-1 xl:order-2">
+      <section className="py-5 col-span-2 order-1 xl:order-2">
         <Card
           className="w-[95%] h-16 mb-4 mx-auto bg-transparent z-50 shadow-[0_0_20px_indigo]"
           shadow={false}
@@ -417,7 +417,7 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="grid grid-cols-1 justify-start relative order-3 mx-auto">
+      <section className="grid grid-cols-1 relative order-3 mx-auto">
         <Card
           className="xl:sticky xl:top-0 h-full bg-transparent"
           shadow={false}
