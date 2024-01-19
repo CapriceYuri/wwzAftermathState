@@ -46,5 +46,14 @@ export const PlayerData = {
       type: "Gunslinger",
       time: 1110,
     },
+    {
+      img: "player-richt",
+      name: "Rich T",
+      map: "Descent",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=qCC7dUj0FeI",
+      type: "Gunslinger",
+      time: 784,
+    },
   ],
 };

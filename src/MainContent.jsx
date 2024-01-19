@@ -55,12 +55,12 @@ export default function MainSection() {
         className="fixed min-h-lvh w-full object-cover"
       />
 
-      <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto">
+      <section className="grid grid-cols-1 relative order-2 xl:order-1 mx-auto w-full">
         <Card
-          className="xl:sticky xl:top-0 h-full bg-transparent"
+          className="xl:sticky xl:top-0 h-1/2 bg-transparent"
           shadow={false}
         >
-          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1">
+          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 mx-auto">
             {HordePlayer.map((dev, index) => (
               <ListItem
                 key={index}
@@ -396,7 +396,7 @@ export default function MainSection() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="w-6 h-6 text-red-600 z-10"
+                      className="w-6 h-6 text-green-400 z-10"
                     >
                       <path
                         fillRule="evenodd"
@@ -420,12 +420,12 @@ export default function MainSection() {
         </Card>
       </section>
 
-      <section className="grid grid-cols-1 relative order-3 mx-auto">
+      <section className="grid grid-cols-1 relative order-3 mx-auto w-full">
         <Card
-          className="xl:sticky xl:top-0 h-full bg-transparent"
+          className="xl:sticky xl:top-0 h-1/2 w-full bg-transparent"
           shadow={false}
         >
-          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1">
+          <List className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 mx-auto">
             {ExtremePlayer.map((dev, index) => (
               <ListItem
                 key={index}
