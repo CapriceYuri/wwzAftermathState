@@ -17,4 +17,16 @@ export const DevStaff = [
     name: "Em",
     mark: "Saber",
   },
+  {
+    id: 4,
+    img: "dev-Metatron.png",
+    name: "Metatron",
+    mark: "Saber",
+  },
+  {
+    id: 5,
+    img: "dev-Zara.png",
+    name: "Zara",
+    mark: "Saber",
+  },
 ];
