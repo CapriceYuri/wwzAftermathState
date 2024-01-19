@@ -15,7 +15,8 @@ import { useState } from "react";
 import { PlayerData } from "./DataFile/Data";
 import { ExtremePlayer } from "./DataFile/ExtremeData";
 import { HordePlayer } from "./DataFile/HordeData";
-
+import { DevStaff } from "./DataFile/devData";
+import { ModPlayer } from "./DataFile/modData";
 import { TestData } from "./DataFile/Data2";
 
 // Required Imports
@@ -280,6 +281,86 @@ export default function MainSection() {
             </div>
           </CardFooter>
         </Card>
+        <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[100%] gap-x-2">
+          <Card
+            className="w-[95%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
+            shadow={false}
+          >
+            <img
+              src="placeholder4.png"
+              className="h-full w-full object-cover rounded-2xl absolute"
+            />
+            <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl" />
+
+            <div className="grid grid-cols-1 my-auto">
+              <Carousel className="rounded-xl" loop={true} autoplay={true}>
+                {DevStaff.map((player) => (
+                  <div className="h-[200px] w-full">
+                    <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                      <Avatar
+                        src={player.img}
+                        size="xl"
+                        withBorder={true}
+                        className="p-0.5"
+                        color="pink"
+                      />
+                      <div>
+                        <Typography variant="h4" color="white">
+                          {player.name}
+                        </Typography>
+                        <Typography
+                          variant="h6"
+                          color="pink"
+                          className="font-semibold"
+                          children={player.mark}
+                        ></Typography>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          </Card>
+          <Card
+            className="w-[95%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
+            shadow={false}
+          >
+            <img
+              src="placeholder5.png"
+              className="h-full w-full object-cover rounded-2xl absolute"
+            />
+            <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl" />
+
+            <div className="grid grid-cols-1 my-auto">
+              <Carousel className="rounded-xl" loop={true} autoplay={true}>
+                {ModPlayer.map((player) => (
+                  <div className="h-[200px] w-full">
+                    <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                      <Avatar
+                        src={player.img}
+                        size="xl"
+                        withBorder={true}
+                        className="p-0.5"
+                        color="pink"
+                      />
+                      <div>
+                        <Typography variant="h4" color="white">
+                          {player.name}
+                        </Typography>
+                        <Typography
+                          variant="h6"
+                          color="pink"
+                          className="font-semibold"
+                          children={player.mark}
+                        ></Typography>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          </Card>
+        </div>
       </section>
     </section>
   );
