@@ -56,7 +56,7 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-4 2xl:grid-cols-6 relative h-lvh overflow-x-hidden">
+    <section className="grid grid-cols-4 2xl:grid-cols-6 relative h-full overflow-x-hidden">
       <img
         src="bgtesting.png"
         className="fixed h-lvh w-full object-cover -z-10"
