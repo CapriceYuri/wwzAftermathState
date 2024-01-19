@@ -290,7 +290,7 @@ export default function MainSection() {
               src="placeholder4.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -329,7 +329,7 @@ export default function MainSection() {
               src="placeholder5.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
