@@ -353,6 +353,12 @@ export default function MainSection() {
                           className="font-semibold"
                           children={player.mark}
                         ></Typography>
+                        <Typography
+                          variant="h6"
+                          color="pink"
+                          className="font-semibold"
+                          children={player.mark2}
+                        ></Typography>
                       </div>
                     </div>
                   </div>
