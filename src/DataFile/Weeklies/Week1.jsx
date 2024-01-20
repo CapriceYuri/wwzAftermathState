@@ -1,4 +1,4 @@
-export const TestData = {
+export const Week1 = {
   mutators: ["Small Pharma", "CW: Medic", "Die Hard"],
   runs: [
     {

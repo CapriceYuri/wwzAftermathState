@@ -12,19 +12,19 @@ import React from "react";
 import { IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 
-import { PlayerData } from "./DataFile/Data";
-import { ExtremePlayer } from "./DataFile/ExtremeData";
-import { HordePlayer } from "./DataFile/HordeData";
-import { DevStaff } from "./DataFile/devData";
-import { ModPlayer } from "./DataFile/modData";
-import { TestData } from "./DataFile/Data2";
+import { Week2 } from "./DataFile/Weeklies/Week2";
+import { ExtremePlayer } from "./DataFile/Carousel/ExtremeData";
+import { HordePlayer } from "./DataFile/Carousel/HordeData";
+import { DevStaff } from "./DataFile/Carousel/devData";
+import { ModPlayer } from "./DataFile/Carousel/modData";
+import { Week1 } from "./DataFile/Weeklies/Week1";
 
 // Required Imports
 
-PlayerData.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
-TestData.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
+Week2.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
+Week1.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
 
-const allData = [PlayerData, TestData];
+const allData = [Week2, Week1];
 const links = [
   { title: "Perks", src: "https://capriceyuri.github.io/wwzAftermathPerks/" },
   { title: "Horde", src: "https://capriceyuri.github.io/wwzAftermathHorde/" },
@@ -41,8 +41,8 @@ export default function MainSection() {
   // Hooks - Functionality
 
   const getItemProps = (index) => ({
-    variant: active === index ? "filled" : "text",
-    color: "white",
+    variant: active === index ? "gradient" : "text",
+    color: "black",
     onClick: () => {
       setActive(index);
       setPageInfo(allData[index - 1]);
@@ -186,16 +186,16 @@ export default function MainSection() {
                 color="orange"
                 variant="h5"
                 className="text-center p-2"
-                children="LEADERBOARD"
+                children="WEEKLY LEADERBOARD"
               ></Typography>
             </div>
             <div className="flex flex-row justify-center gap-2">
               {pageInfo.mutators.map((mute) => (
                 <div>
                   <Typography
-                    color="amber"
+                    color="pink"
                     variant="h6"
-                    className="font-semibold text-lg p-2 border-2 rounded-xl text-white"
+                    className="font-semibold text-lg p-2 border-2 border-pink-400 rounded-xl"
                     children={mute}
                   ></Typography>
                 </div>

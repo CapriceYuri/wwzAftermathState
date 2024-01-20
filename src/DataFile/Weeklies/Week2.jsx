@@ -1,4 +1,4 @@
-export const PlayerData = {
+export const Week2 = {
   mutators: ["Rookie", "Looting Is a Crime", "Shaky Hands"],
   runs: [
     {
