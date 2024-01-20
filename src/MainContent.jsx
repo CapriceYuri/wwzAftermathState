@@ -13,18 +13,18 @@ import { IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 
 import { Week2 } from "./DataFile/Weeklies/Week2";
+import { Week1 } from "./DataFile/Weeklies/Week1";
+import { Week0 } from "./DataFile/Weeklies/Week0";
 import { ExtremePlayer } from "./DataFile/Carousel/ExtremeData";
 import { HordePlayer } from "./DataFile/Carousel/HordeData";
 import { DevStaff } from "./DataFile/Carousel/devData";
 import { ModPlayer } from "./DataFile/Carousel/modData";
-import { Week1 } from "./DataFile/Weeklies/Week1";
 
 // Required Imports
 
-Week2.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
-Week1.runs.sort((a, b) => (a.time > b.time ? 1 : -1));
+const allData = [Week2, Week1, Week0];
+allData.forEach((data) => data.runs.sort((a, b) => (a.time > b.time ? 1 : -1)));
 
-const allData = [Week2, Week1];
 const links = [
   { title: "Perks", src: "https://capriceyuri.github.io/wwzAftermathPerks/" },
   { title: "Horde", src: "https://capriceyuri.github.io/wwzAftermathHorde/" },
@@ -277,6 +277,7 @@ export default function MainSection() {
               <div className="flex items-center gap-1">
                 <IconButton {...getItemProps(1)}>1</IconButton>
                 <IconButton {...getItemProps(2)}>2</IconButton>
+                <IconButton {...getItemProps(3)}>3</IconButton>
               </div>
             </div>
           </CardFooter>
