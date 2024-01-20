@@ -9,6 +9,7 @@ export const PlayerData = {
       src: "https://www.youtube.com/watch?v=s7mesGq4_hc",
       type: "Exterminator",
       time: 1186,
+      rating: "Exceptional",
     },
     {
       img: "player-Rainiere",
@@ -18,6 +19,7 @@ export const PlayerData = {
       src: "https://www.youtube.com/watch?v=RToV-UtGn9M",
       type: "Slasher",
       time: 975,
+      rating: "Masterful",
     },
     {
       img: "player-Zombonis",
@@ -27,6 +29,7 @@ export const PlayerData = {
       src: "https://www.youtube.com/watch?v=KdxxOMu8yWI",
       type: "Slasher",
       time: 992,
+      rating: "Skillful",
     },
     {
       img: "player-SiberianPsych0",
@@ -36,6 +39,7 @@ export const PlayerData = {
       src: "https://www.youtube.com/watch?v=bp1FIrgrUGo&t=4s",
       type: "Fixer",
       time: 791,
+      rating: "Outstanding",
     },
     {
       img: "player-visbell",
@@ -45,6 +49,7 @@ export const PlayerData = {
       src: "https://www.youtube.com/watch?v=rYTNJCAL-XM",
       type: "Gunslinger",
       time: 1110,
+      rating: "Remarkable",
     },
     {
       img: "player-richt",
@@ -54,6 +59,7 @@ export const PlayerData = {
       src: "https://www.youtube.com/watch?v=qCC7dUj0FeI",
       type: "Gunslinger",
       time: 784,
+      rating: "Flawless",
     },
     {
       img: "player-玉米大战僵尸",
@@ -63,6 +69,7 @@ export const PlayerData = {
       src: "https://www.bilibili.com/video/BV1Yi4y1i7eG/",
       type: "Slasher",
       time: 963,
+      rating: "Dominant",
     },
   ],
 };

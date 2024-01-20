@@ -62,7 +62,6 @@ export default function MainSection() {
         src="bgtesting.png"
         className="fixed h-lvh w-full object-cover -z-10"
       />
-
       <section className="col-span-4 2xl:col-start-2">
         <Card
           className="w-[100%] h-16 mb-4 mx-auto bg-transparent shadow-[0_0_50px_purple]"
@@ -100,7 +99,7 @@ export default function MainSection() {
               src="placeholder3.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -139,7 +138,7 @@ export default function MainSection() {
               src="placeholder2.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -180,7 +179,7 @@ export default function MainSection() {
             src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-60 rounded-xl"></div>
+          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-400 opacity-50 rounded-xl"></div>
           <List className="z-50">
             <div>
               <Typography
@@ -190,13 +189,13 @@ export default function MainSection() {
                 children="LEADERBOARD"
               ></Typography>
             </div>
-            <div className="flex flex-row justify-evenly gap-2">
+            <div className="flex flex-row justify-center gap-2">
               {pageInfo.mutators.map((mute) => (
                 <div>
                   <Typography
                     color="amber"
                     variant="h6"
-                    className="font-semibold text-lg p-2 border-4 rounded-full border-red-600 text-center"
+                    className="font-semibold text-lg p-2 border-2 rounded-xl text-white"
                     children={mute}
                   ></Typography>
                 </div>
@@ -205,9 +204,9 @@ export default function MainSection() {
             {pageInfo.runs.map((player, index) => (
               <ListItem
                 key={index}
-                className=" hover:bg-indigo-300 focus:bg-purple-400"
+                className=" hover:bg-black focus:bg-black flex flex-row"
               >
-                <div className="flex xl:flex-row flex-col items-center text-center w-1/3">
+                <div className="flex flex-col items-center text-center flex-1">
                   <Avatar
                     variant="rounded"
                     src={`${player.img}.png`}
@@ -222,7 +221,14 @@ export default function MainSection() {
                     ></Typography>
                   </div>
                 </div>
-                <div className="mx-4 text-center w-2/5">
+                <div>
+                  <Typography
+                    variant="small"
+                    className="bg-[#151136] p-1 text-[#B3B4D0] rounded-md text-left font-[Roboto]"
+                    children={player.rating}
+                  ></Typography>
+                </div>
+                <div className="mx-4 text-center flex-1">
                   <Typography
                     variant="small"
                     color="white"
@@ -238,7 +244,7 @@ export default function MainSection() {
                   ></Typography>
                 </div>
 
-                <div className="mx-4 text-center w-1/4">
+                <div className="mx-4 text-center flex-1">
                   <Typography
                     variant="h6"
                     color="white"
@@ -253,7 +259,7 @@ export default function MainSection() {
                   ></Typography>
                 </div>
 
-                <div className="flex justify-center max-w-sm">
+                <div className="flex justify-center">
                   <a href={player.src} target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +296,7 @@ export default function MainSection() {
               src="placeholder4.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -329,7 +335,7 @@ export default function MainSection() {
               src="placeholder5.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-400 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
