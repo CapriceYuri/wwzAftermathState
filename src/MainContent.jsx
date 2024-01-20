@@ -330,12 +330,25 @@ export default function MainSection() {
               src="placeholder5.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
+            {/* TESTING vid bg */}
+            {/* <video
+              typeof="video/mp4"
+              src="monster.mp4"
+              className="h-full w-full object-cover absolute"
+              muted
+              autoPlay
+              loop
+            /> */}
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-300 opacity-70 rounded-xl" />
 
-            <div className="grid grid-cols-1 my-auto">
-              <Carousel className="rounded-xl" loop={true} autoplay={true}>
+            <div className="grid grid-cols-1 my-auto h-full">
+              <Carousel
+                className="rounded-xl h-full"
+                loop={true}
+                autoplay={true}
+              >
                 {ModPlayer.map((player) => (
-                  <div className="h-[200px] w-full">
+                  <div className="h-full w-full">
                     <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
                       <Avatar
                         src={player.img}
