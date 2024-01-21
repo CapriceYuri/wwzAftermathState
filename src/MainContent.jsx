@@ -115,11 +115,11 @@ export default function MainSection() {
                 key={index}
                 className=" hover:bg-black focus:bg-black flex flex-row"
               >
-                <div className="flex flex-col text-center items-center flex-1">
+                <div className="flex flex-col text-center items-start md:items-center flex-1">
                   <Avatar
                     variant="rounded"
                     src={`${player.img}.png`}
-                    className="mx-auto xl:mx-1"
+                    className="xl:mx-1"
                   />
                   <div>
                     <Typography
