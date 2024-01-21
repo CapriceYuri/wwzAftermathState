@@ -17,7 +17,7 @@ export const StatRun = {
       map: "French Resistance",
       diff: "Extreme",
       src: "https://www.youtube.com/watch?v=RPYSq6MYrsY",
-      stat: "Team No Damage Taken",
+      stat: "Team 0 Damage Taken",
       statInfo: "4 Players",
       class: "",
       team: "TEAM",

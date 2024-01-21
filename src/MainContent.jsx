@@ -163,7 +163,7 @@ export default function MainSection() {
 
                 <div className="mx-4 text-center flex-1">
                   <Typography
-                    variant="h6"
+                    variant="small"
                     color="pink"
                     className="font-semibold"
                     children={player.stat}
