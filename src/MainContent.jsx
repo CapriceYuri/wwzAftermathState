@@ -115,11 +115,11 @@ export default function MainSection() {
                 key={index}
                 className=" hover:bg-black focus:bg-black flex flex-row"
               >
-                <div className="flex flex-col text-center items-start md:items-center flex-1">
+                <div className="flex flex-col md:text-center md:items-center flex-1">
                   <Avatar
                     variant="rounded"
                     src={`${player.img}.png`}
-                    className="p-0.5"
+                    className="md:mx-auto p-0.5"
                     withBorder={true}
                     color="deep-orange"
                   />
@@ -149,7 +149,7 @@ export default function MainSection() {
                 <div className="mx-4 flex-1 text-center">
                   <Typography
                     variant="h6"
-                    color="red"
+                    color={player.team === "SOLO" ? "red" : "cyan"}
                     className="font-semibold"
                     children={player.team}
                   ></Typography>
