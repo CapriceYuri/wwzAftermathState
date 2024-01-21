@@ -115,7 +115,7 @@ export default function MainSection() {
                 key={index}
                 className=" hover:bg-black focus:bg-black flex flex-row"
               >
-                <div className="flex flex-col items-center text-center flex-1">
+                <div className="flex flex-col text-center items-center flex-1">
                   <Avatar
                     variant="rounded"
                     src={`${player.img}.png`}
@@ -130,7 +130,7 @@ export default function MainSection() {
                     ></Typography>
                   </div>
                 </div>
-                <div className="mx-4 text-center flex-1">
+                <div className="mx-4 flex-1 text-center">
                   <Typography
                     variant="h6"
                     color="white"
@@ -144,7 +144,7 @@ export default function MainSection() {
                     children={player.diff}
                   ></Typography>
                 </div>
-                <div className="mx-4 text-center flex-1">
+                <div className="mx-4 flex-1 text-center">
                   <Typography
                     variant="h6"
                     color="red"
@@ -212,7 +212,7 @@ export default function MainSection() {
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
                 {HordePlayer.map((player) => (
                   <div className="h-[200px] w-full">
-                    <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
+                    <div className="flex flex-row h-full justify-center gap-2 items-center">
                       <Avatar
                         src={player.img}
                         size="xl"
