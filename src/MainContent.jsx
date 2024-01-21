@@ -107,7 +107,7 @@ export default function MainSection() {
                 color="deep-orange"
                 variant="h5"
                 className="text-center p-2"
-                children="Hierarchy Runs"
+                children="HIERARCHY RUNS"
               ></Typography>
             </div>
             {StatRun.runs.map((player, index) => (

@@ -1,10 +1,5 @@
 export const ExtremePlayer = [
   {
-    id: 1,
-    img: "players/player-xD3viLz.png",
-    name: "xD3viLz",
-  },
-  {
     id: 2,
     img: "players/player-ABA.png",
     name: "ABA",
@@ -81,5 +76,22 @@ export const ExtremePlayer = [
     img: "players/player-邦邦.png",
     name: "邦邦",
     mark: "TW HK MY",
+  },
+  {
+    id: 1,
+    img: "players/player-xD3viLz.png",
+    name: "xD3viLz",
+  },
+  {
+    id: 16,
+    img: "players/player-おやじ日本人.png",
+    name: "おやじ日本人",
+    mark: "Dynamic Duo",
+  },
+  {
+    id: 15,
+    img: "players/player-BadOssan.png",
+    name: "BadOssan",
+    mark: "Dynamic Duo",
   },
 ];
