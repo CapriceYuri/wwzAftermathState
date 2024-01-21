@@ -119,7 +119,9 @@ export default function MainSection() {
                   <Avatar
                     variant="rounded"
                     src={`${player.img}.png`}
-                    className="xl:mx-1"
+                    className="p-0.5"
+                    withBorder={true}
+                    color="deep-orange"
                   />
                   <div>
                     <Typography
