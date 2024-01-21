@@ -2,6 +2,24 @@ export const Week0 = {
   mutators: ["Just a Scratch", "Asthma", "Limited Reach"],
   runs: [
     {
+      img: "player-Vinhtrn",
+      name: "Vinhtrn",
+      map: "Tunnel Vision",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=RKVbtpUVgPA",
+      time: 1437,
+      rating: "SOLO",
+    },
+    {
+      img: "player-Abang",
+      name: "Abang Long",
+      map: "Tunnel Vision",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=U0jGAgxOtMI",
+      time: 1144,
+      rating: "SOLO",
+    },
+    {
       img: "player-enderlem",
       name: "Enderlem",
       map: "Tunnel Vision",

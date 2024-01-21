@@ -2,6 +2,15 @@ export const Week2 = {
   mutators: ["Rookie", "Looting Is a Crime", "Shaky Hands"],
   runs: [
     {
+      img: "player-Abang",
+      name: "Abang Long",
+      map: "Descent",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=fe7X4uJP7a4&t=3s",
+      time: 1056,
+      rating: "SOLO",
+    },
+    {
       img: "player-enderlem",
       name: "Enderlem",
       map: "Descent",

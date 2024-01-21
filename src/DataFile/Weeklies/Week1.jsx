@@ -2,6 +2,26 @@ export const Week1 = {
   mutators: ["Small Pharma", "CW: Medic", "Die Hard"],
   runs: [
     {
+      img: "player-Vinhtrn",
+      name: "Vinhtrn",
+      map: "Brain Surgery",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=N4rYVTRgO28",
+      type: "Gunslinger",
+      time: 1372,
+      rating: "SOLO",
+    },
+    {
+      img: "player-Abang",
+      name: "Abang Long",
+      map: "Brain Surgery",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=KAgK81juWWk",
+      type: "Gunslinger",
+      time: 1257,
+      rating: "SOLO",
+    },
+    {
       img: "player-enderlem",
       name: "Enderlem",
       map: "Brain Surgery",
