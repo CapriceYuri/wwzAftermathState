@@ -2,6 +2,15 @@ export const Week0 = {
   mutators: ["Just a Scratch", "Asthma", "Limited Reach"],
   runs: [
     {
+      img: "player-enderlem",
+      name: "Enderlem",
+      map: "Tunnel Vision",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=64d4IBBc7wU",
+      time: 1133,
+      rating: "SOLO",
+    },
+    {
       img: "player-NieR",
       name: "NieR 777",
       map: "Tunnel Vision",

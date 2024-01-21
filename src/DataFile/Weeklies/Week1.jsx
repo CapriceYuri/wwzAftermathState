@@ -2,6 +2,16 @@ export const Week1 = {
   mutators: ["Small Pharma", "CW: Medic", "Die Hard"],
   runs: [
     {
+      img: "player-enderlem",
+      name: "Enderlem",
+      map: "Brain Surgery",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=fvS8U4n79yk",
+      type: "Gunslinger",
+      time: 1036,
+      rating: "SOLO",
+    },
+    {
       img: "player-NieR",
       name: "NieR 777",
       map: "Brain Surgery",

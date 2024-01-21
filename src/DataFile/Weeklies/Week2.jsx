@@ -2,6 +2,15 @@ export const Week2 = {
   mutators: ["Rookie", "Looting Is a Crime", "Shaky Hands"],
   runs: [
     {
+      img: "player-enderlem",
+      name: "Enderlem",
+      map: "Descent",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=J36yPCGu8Vc&t=132s",
+      time: 1017,
+      rating: "SOLO",
+    },
+    {
       img: "player-NieR",
       name: "NieR 777",
       map: "Descent",
