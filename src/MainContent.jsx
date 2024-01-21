@@ -132,7 +132,7 @@ export default function MainSection() {
                 </div>
                 <div className="mx-4 text-center flex-1">
                   <Typography
-                    variant="h5"
+                    variant="h6"
                     color="white"
                     className="font-semibold"
                     children={player.map}
@@ -146,7 +146,7 @@ export default function MainSection() {
                 </div>
                 <div className="mx-4 text-center flex-1">
                   <Typography
-                    variant="h5"
+                    variant="h6"
                     color="red"
                     className="font-semibold"
                     children={player.team}
@@ -161,14 +161,14 @@ export default function MainSection() {
 
                 <div className="mx-4 text-center flex-1">
                   <Typography
-                    variant="h5"
+                    variant="h6"
                     color="pink"
                     className="font-semibold"
                     children={player.stat}
                   ></Typography>
 
                   <Typography
-                    variant="h6"
+                    variant="small"
                     color="amber"
                     className="font-normal"
                     children={player.statInfo}
