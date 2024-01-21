@@ -175,7 +175,7 @@ export default function MainSection() {
                   ></Typography>
                 </div>
 
-                <div className="flex justify-center">
+                <div className="flex justify-center flex-1">
                   <a href={player.src} target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
