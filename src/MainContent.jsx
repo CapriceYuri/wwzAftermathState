@@ -181,7 +181,8 @@ export default function MainSection() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="w-6 h-6 text-orange-900 z-10"
+                      color="yellow"
+                      className="w-6 h-6 z-10"
                     >
                       <path
                         fillRule="evenodd"
@@ -365,7 +366,8 @@ export default function MainSection() {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="w-6 h-6 text-orange-900 z-10"
+                      color="yellow"
+                      className="w-6 h-6 z-10"
                     >
                       <path
                         fillRule="evenodd"
