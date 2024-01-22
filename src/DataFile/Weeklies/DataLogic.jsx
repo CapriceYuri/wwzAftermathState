@@ -10,6 +10,8 @@ const allPlayerProfile = [...allData, StatRun];
 let temp = 0;
 let tempPlayerArr = [];
 
+allData.forEach((data) => data.runs.sort((a, b) => (a.time > b.time ? 1 : -1)));
+
 function findTotalRuns() {
   for (let i = 0; i < allPlayerProfile.length; i++) {
     temp += allPlayerProfile[i].runs.length;

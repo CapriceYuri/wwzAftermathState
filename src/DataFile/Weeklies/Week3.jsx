@@ -11,6 +11,15 @@ export const Week3 = {
       rating: "SOLO",
     },
     {
+      img: "player-zMeba",
+      name: "zMeba",
+      map: "Battle of Nerves",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=X6QdDfDyv5Y",
+      time: 1127,
+      rating: "TEAM",
+    },
+    {
       img: "player-enderlem",
       name: "Enderlem",
       map: "Battle of Nerves",
