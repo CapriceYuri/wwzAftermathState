@@ -12,20 +12,19 @@ import React from "react";
 import { IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 
-import { Week3 } from "./DataFile/Weeklies/Week3";
-import { Week2 } from "./DataFile/Weeklies/Week2";
-import { Week1 } from "./DataFile/Weeklies/Week1";
-import { Week0 } from "./DataFile/Weeklies/Week0";
 import { ExtremePlayer } from "./DataFile/Carousel/ExtremeData";
 import { HordePlayer } from "./DataFile/Carousel/HordeData";
 import { DevStaff } from "./DataFile/Carousel/devData";
 import { ModPlayer } from "./DataFile/Carousel/modData";
 import { StatRun } from "./DataFile/Weeklies/Stats";
 
-// Required Imports
+import {
+  totalRuns,
+  totalUniquePlayers,
+  allData,
+} from "./DataFile/Weeklies/DataLogic";
 
-const allData = [Week3, Week2, Week1, Week0];
-allData.forEach((data) => data.runs.sort((a, b) => (a.time > b.time ? 1 : -1)));
+// Required Imports
 
 const links = [
   { title: "Perks", src: "https://capriceyuri.github.io/wwzAftermathPerks/" },
@@ -394,7 +393,8 @@ export default function MainSection() {
             </div>
           </CardFooter>
         </Card>
-        <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[100%] gap-x-2">
+
+        <div className="grid grid-cols-2 mx-auto w-[100%] gap-x-2 p-2">
           <Card
             className="w-[100%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
             shadow={false}
@@ -404,34 +404,16 @@ export default function MainSection() {
               className="h-full w-full object-cover rounded-2xl absolute"
             />
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-200 opacity-50 rounded-xl" />
-
-            <div className="grid grid-cols-1 my-auto">
-              <Carousel className="rounded-xl" loop={true} autoplay={true}>
-                {DevStaff.map((player) => (
-                  <div className="h-[200px] w-full">
-                    <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
-                      <Avatar
-                        src={player.img}
-                        size="xl"
-                        withBorder={true}
-                        className="p-0.5"
-                        color="pink"
-                      />
-                      <div>
-                        <Typography variant="h4" color="white">
-                          {player.name}
-                        </Typography>
-                        <Typography
-                          variant="h6"
-                          color="pink"
-                          className="font-semibold"
-                          children={player.mark}
-                        ></Typography>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Carousel>
+            <div className="z-50 flex flex-col h-full justify-center gap-2 items-center">
+              <Typography variant="h4" color="white">
+                {`Total Runs`}
+              </Typography>
+              <Typography
+                variant="h1"
+                color="deep-orange"
+                className="font-bold"
+                children={totalRuns}
+              ></Typography>
             </div>
           </Card>
           <Card
@@ -442,54 +424,18 @@ export default function MainSection() {
               src="placeholder5.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            {/* TESTING vid bg */}
-            {/* <video
-              typeof="video/mp4"
-              src="monster.mp4"
-              className="h-full w-full object-cover absolute"
-              muted
-              autoPlay
-              loop
-            /> */}
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-200 opacity-50 rounded-xl" />
 
-            <div className="grid grid-cols-1 my-auto h-full">
-              <Carousel
-                className="rounded-xl h-full"
-                loop={true}
-                autoplay={true}
-              >
-                {ModPlayer.map((player) => (
-                  <div className="h-full w-full">
-                    <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
-                      <Avatar
-                        src={player.img}
-                        size="xl"
-                        withBorder={true}
-                        className="p-0.5"
-                        color="pink"
-                      />
-                      <div>
-                        <Typography variant="h4" color="white">
-                          {player.name}
-                        </Typography>
-                        <Typography
-                          variant="h6"
-                          color="pink"
-                          className="font-semibold"
-                          children={player.mark}
-                        ></Typography>
-                        <Typography
-                          variant="h6"
-                          color="pink"
-                          className="font-semibold"
-                          children={player.mark2}
-                        ></Typography>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Carousel>
+            <div className="z-50 flex flex-col h-full justify-center gap-2 items-center">
+              <Typography variant="h4" color="white">
+                {`Unique Players`}
+              </Typography>
+              <Typography
+                variant="h1"
+                color="deep-orange"
+                className="font-bold"
+                children={totalUniquePlayers}
+              ></Typography>
             </div>
           </Card>
         </div>
