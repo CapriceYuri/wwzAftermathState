@@ -70,7 +70,7 @@ export default function MainSection() {
           shadow={false}
         >
           <img
-            src="bunko.png"
+            src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl absolute"
           />
           <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-200 opacity-50 rounded-xl" />
@@ -98,7 +98,7 @@ export default function MainSection() {
           shadow={false}
         >
           <img
-            src="bgtesting.png"
+            src="kimiko.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
           <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-200 opacity-50 rounded-xl"></div>
