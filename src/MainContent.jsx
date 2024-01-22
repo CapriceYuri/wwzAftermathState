@@ -70,19 +70,19 @@ export default function MainSection() {
           shadow={false}
         >
           <img
-            src="placeholder3.png"
+            src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl absolute"
           />
           <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-200 opacity-50 rounded-xl" />
-          <nav className="h-full mix-blend-overlay">
+          <nav className="h-full z-50">
             <ul className="grid grid-cols-3 h-full justify-evenly place-items-center">
               {links.map((link) => (
                 <li>
                   <a href={link.src} target="_blank">
                     <Typography
                       color="white"
-                      variant="h6"
-                      className="hover:text-black"
+                      variant="h5"
+                      className="hover:text-orange-700"
                     >
                       {link.title}
                     </Typography>
@@ -286,7 +286,7 @@ export default function MainSection() {
           shadow={false}
         >
           <img
-            src="placeholder.png"
+            src="bunko.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
           <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-200 opacity-50 rounded-xl"></div>
