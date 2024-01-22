@@ -83,7 +83,7 @@ export const StatRun = {
       map: "Episode 1-7",
       diff: "Extreme",
       src: "https://www.youtube.com/watch?v=liNEw67EwnA",
-      stat: "No Damage Taken",
+      stat: "Full Clear",
       statInfo: "No Bot",
       class: "",
       team: "SOLO",
