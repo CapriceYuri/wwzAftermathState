@@ -72,7 +72,7 @@ export default function MainSection() {
             src="placeholder3.png"
             className="h-full w-full object-cover rounded-2xl absolute"
           />
-          <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-red-300 opacity-80 rounded-xl" />
+          <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-200 opacity-50 rounded-xl" />
           <nav className="h-full mix-blend-overlay">
             <ul className="grid grid-cols-3 h-full justify-evenly place-items-center">
               {links.map((link) => (
@@ -100,7 +100,7 @@ export default function MainSection() {
             src="bgtesting.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-300 opacity-70 rounded-xl"></div>
+          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-200 opacity-50 rounded-xl"></div>
           <List className="z-50">
             <div>
               <Typography
@@ -149,7 +149,7 @@ export default function MainSection() {
                 <div className="mx-4 flex-1 text-center">
                   <Typography
                     variant="h6"
-                    color={player.team === "SOLO" ? "red" : "cyan"}
+                    color={player.team === "SOLO" ? "deep-orange" : "cyan"}
                     className="font-semibold"
                     children={player.team}
                   ></Typography>
@@ -164,7 +164,7 @@ export default function MainSection() {
                 <div className="mx-4 text-center flex-1">
                   <Typography
                     variant="small"
-                    color="pink"
+                    color="yellow"
                     className="font-semibold"
                     children={player.stat}
                   ></Typography>
@@ -208,7 +208,7 @@ export default function MainSection() {
               src="placeholder3.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-300 opacity-70 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-200 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -247,7 +247,7 @@ export default function MainSection() {
               src="placeholder2.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-300 opacity-70 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-200 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -288,7 +288,7 @@ export default function MainSection() {
             src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-red-300 opacity-70 rounded-xl"></div>
+          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-200 opacity-50 rounded-xl"></div>
           <List className="z-50">
             <div>
               <Typography
@@ -349,7 +349,7 @@ export default function MainSection() {
                 <div className="mx-4 text-center flex-1">
                   <Typography
                     variant="h5"
-                    color={player.rating === "SOLO" ? "red" : "blue"}
+                    color={player.rating === "SOLO" ? "deep-orange" : "blue"}
                     className="font-semibold"
                     children={player.rating}
                   ></Typography>
@@ -401,7 +401,7 @@ export default function MainSection() {
               src="placeholder4.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-300 opacity-70 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-200 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -449,7 +449,7 @@ export default function MainSection() {
               autoPlay
               loop
             /> */}
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-red-300 opacity-70 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-200 opacity-50 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto h-full">
               <Carousel
