@@ -82,5 +82,14 @@ export const Week3 = {
       time: 635,
       rating: "SOLO",
     },
+    {
+      img: "player-Vinhtrn",
+      name: "Vinhtrn",
+      map: "Battle of Nerves",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=_MU6OnrajeA",
+      time: 951,
+      rating: "TEAM",
+    },
   ],
 };
