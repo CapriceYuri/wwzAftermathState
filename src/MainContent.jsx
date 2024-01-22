@@ -195,6 +195,14 @@ export default function MainSection() {
               </ListItem>
             ))}
           </List>
+          {/* <CardFooter>
+            <div className="flex justify-between items-center gap-4">
+              <div className="flex items-center gap-1">
+                <IconButton {...getItemProps(1)}>1</IconButton>
+                <IconButton {...getItemProps(2)}>2</IconButton>
+              </div>
+            </div>
+          </CardFooter> */}
         </Card>
         {/* testing */}
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[100%] gap-x-2">
