@@ -70,7 +70,7 @@ export default function MainSection() {
           shadow={false}
         >
           <img
-            src="placeholder.png"
+            src="bunko.png"
             className="h-full w-full object-cover rounded-2xl absolute"
           />
           <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-200 opacity-50 rounded-xl" />
@@ -122,7 +122,7 @@ export default function MainSection() {
                     src={`${player.img}.png`}
                     className="md:mx-auto p-0.5"
                     withBorder={true}
-                    color={player.placeholder == true ? "yellow" : "blue"}
+                    color="blue"
                   />
                   <div>
                     <Typography
@@ -286,7 +286,7 @@ export default function MainSection() {
           shadow={false}
         >
           <img
-            src="bunko.png"
+            src="hiroji.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
           <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-200 opacity-50 rounded-xl"></div>
