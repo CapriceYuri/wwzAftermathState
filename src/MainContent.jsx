@@ -12,6 +12,7 @@ import React from "react";
 import { IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 
+import { Week3 } from "./DataFile/Weeklies/Week3";
 import { Week2 } from "./DataFile/Weeklies/Week2";
 import { Week1 } from "./DataFile/Weeklies/Week1";
 import { Week0 } from "./DataFile/Weeklies/Week0";
@@ -23,7 +24,7 @@ import { StatRun } from "./DataFile/Weeklies/Stats";
 
 // Required Imports
 
-const allData = [Week2, Week1, Week0];
+const allData = [Week3, Week2, Week1, Week0];
 allData.forEach((data) => data.runs.sort((a, b) => (a.time > b.time ? 1 : -1)));
 
 const links = [
@@ -388,6 +389,7 @@ export default function MainSection() {
                 <IconButton {...getItemProps(1)}>1</IconButton>
                 <IconButton {...getItemProps(2)}>2</IconButton>
                 <IconButton {...getItemProps(3)}>3</IconButton>
+                <IconButton {...getItemProps(4)}>4</IconButton>
               </div>
             </div>
           </CardFooter>
