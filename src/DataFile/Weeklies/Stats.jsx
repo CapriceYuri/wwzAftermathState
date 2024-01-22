@@ -23,6 +23,17 @@ export const StatRun = {
       team: "SOLO",
     },
     {
+      img: "player-nthpvn",
+      name: "NTH_PVN",
+      map: "Episode 8",
+      diff: "Extreme",
+      src: "https://www.youtube.com/watch?v=a7DTZ8P18jQ&list=PLu39oG4FudH9GsdcWOEjuePNeNcdYQV2W",
+      stat: "Full Clear",
+      statInfo: "No Bot",
+      class: "Gunslinger",
+      team: "SOLO",
+    },
+    {
       img: "players/player-野口 ハヤシ",
       name: "Noguchi",
       map: "French Resistance",
@@ -36,7 +47,7 @@ export const StatRun = {
     {
       img: "player-rasmuspost",
       name: "RasmusPost",
-      map: "Phoenix",
+      map: "Episode 8",
       diff: "Extreme",
       src: "https://www.youtube.com/watch?v=Z2htrW7OxfQ",
       stat: "Full Clear",
