@@ -147,7 +147,7 @@ export default function MainSection() {
                 <div className="mx-4 flex-1 text-center">
                   <Typography
                     variant="h6"
-                    color={player.team === "SOLO" ? "deep-orange" : "cyan"}
+                    color={player.team === "SOLO" ? "deep-orange" : "amber"}
                     className="font-semibold"
                     children={player.team}
                   ></Typography>
@@ -355,14 +355,14 @@ export default function MainSection() {
                 <div className="mx-4 text-center flex-1">
                   <Typography
                     variant="h5"
-                    color={player.rating === "SOLO" ? "deep-orange" : "cyan"}
+                    color={player.rating === "SOLO" ? "deep-orange" : "amber"}
                     className="font-semibold"
                     children={player.rating}
                   ></Typography>
 
                   <Typography
                     variant="h6"
-                    color="amber"
+                    color="white"
                     className="font-normal"
                     children={conversion(player.time)}
                   ></Typography>
@@ -410,7 +410,7 @@ export default function MainSection() {
               className="h-full w-full object-cover rounded-2xl absolute"
             />
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-300 opacity-60 rounded-xl" />
-            <div className="z-50 flex flex-col h-full justify-center gap-2 items-center">
+            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
               <Typography variant="h4" color="white">
                 {`Total Runs`}
               </Typography>
@@ -432,7 +432,7 @@ export default function MainSection() {
             />
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-300 opacity-60 rounded-xl" />
 
-            <div className="z-50 flex flex-col h-full justify-center gap-2 items-center">
+            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
               <Typography variant="h4" color="white">
                 {`Unique Players`}
               </Typography>
