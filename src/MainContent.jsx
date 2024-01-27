@@ -89,6 +89,52 @@ export default function MainSection() {
             </ul>
           </nav>
         </Card>
+
+        <div className="grid grid-cols-2 my-2 mx-auto w-[100%] gap-x-2 p-2">
+          <Card
+            className="w-[100%] h-56 mx-auto bg-transparent shadow-[0_0_40px_purple] relative"
+            shadow={false}
+          >
+            <img
+              src="placeholder4.png"
+              className="h-full w-full object-cover rounded-2xl absolute"
+            />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
+            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
+              <Typography variant="h4" color="white">
+                {`Total Runs`}
+              </Typography>
+              <Typography
+                variant="h1"
+                color="deep-orange"
+                className="font-bold"
+                children={totalRuns}
+              ></Typography>
+            </div>
+          </Card>
+          <Card
+            className="w-[100%] h-56 mx-auto bg-transparent shadow-[0_0_40px_purple] relative"
+            shadow={false}
+          >
+            <img
+              src="placeholder5.png"
+              className="h-full w-full object-cover rounded-2xl absolute"
+            />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
+
+            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
+              <Typography variant="h4" color="white">
+                {`Unique Players`}
+              </Typography>
+              <Typography
+                variant="h1"
+                color="deep-orange"
+                className="font-bold"
+                children={totalUniquePlayers}
+              ></Typography>
+            </div>
+          </Card>
+        </div>
         {/* testing */}
         <Card
           className="w-[100%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
@@ -293,7 +339,7 @@ export default function MainSection() {
         </div>
 
         <Card
-          className="w-[100%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
+          className="w-[100%] mx-auto mb-8 bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
           shadow={false}
         >
           <img
@@ -405,52 +451,6 @@ export default function MainSection() {
             </div>
           </CardFooter>
         </Card>
-
-        <div className="grid grid-cols-2 mx-auto w-[100%] gap-x-2 p-2">
-          <Card
-            className="w-[100%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
-            shadow={false}
-          >
-            <img
-              src="placeholder4.png"
-              className="h-full w-full object-cover rounded-2xl absolute"
-            />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
-            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
-              <Typography variant="h4" color="white">
-                {`Total Runs`}
-              </Typography>
-              <Typography
-                variant="h1"
-                color="deep-orange"
-                className="font-bold"
-                children={totalRuns}
-              ></Typography>
-            </div>
-          </Card>
-          <Card
-            className="w-[100%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
-            shadow={false}
-          >
-            <img
-              src="placeholder5.png"
-              className="h-full w-full object-cover rounded-2xl absolute"
-            />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
-
-            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
-              <Typography variant="h4" color="white">
-                {`Unique Players`}
-              </Typography>
-              <Typography
-                variant="h1"
-                color="deep-orange"
-                className="font-bold"
-                children={totalUniquePlayers}
-              ></Typography>
-            </div>
-          </Card>
-        </div>
       </section>
     </section>
   );
