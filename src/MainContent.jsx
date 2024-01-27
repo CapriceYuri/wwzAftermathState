@@ -5,34 +5,20 @@ import {
   Card,
   Typography,
   CardFooter,
-  Carousel,
+  IconButton,
 } from "@material-tailwind/react";
 
 import React from "react";
-import { IconButton } from "@material-tailwind/react";
 import { useState } from "react";
 
-import { ExtremePlayer } from "./DataFile/Carousel/ExtremeData";
-import { HordePlayer } from "./DataFile/Carousel/HordeData";
 import { StatRun } from "./DataFile/Weeklies/Stats";
+import HordeCarousel from "./DataFile/Compo/HordeCarousel";
+import ExtremeCarousel from "./DataFile/Compo/SpeedrunCarousel";
+import TotalRunsCard from "./DataFile/Compo/TotalRunCard";
+import TotalPlayerCard from "./DataFile/Compo/TotalPlayerCard";
+import NavigationBar from "./DataFile/Compo/Nav";
 
-import {
-  totalRuns,
-  totalUniquePlayers,
-  allData,
-} from "./DataFile/Weeklies/DataLogic";
-
-// Required Imports
-
-const links = [
-  { title: "Perks", src: "https://capriceyuri.github.io/wwzAftermathPerks/" },
-  { title: "Horde", src: "https://capriceyuri.github.io/wwzAftermathHorde/" },
-  {
-    title: "Speedrun",
-    src: "https://capriceyuri.github.io/wwzAftermathExtreme/",
-  },
-];
-// Data Assortment
+import { allData } from "./DataFile/Weeklies/DataLogic";
 
 export default function MainSection() {
   const [active, setActive] = useState(1);
@@ -62,80 +48,12 @@ export default function MainSection() {
         className="fixed h-lvh w-full object-cover -z-10"
       />
       <section className="col-span-4 2xl:col-start-2">
-        <Card
-          className="w-[100%] h-16 mb-4 mx-auto bg-transparent shadow-[0_0_50px_purple]"
-          shadow={false}
-        >
-          <img
-            src="placeholder.png"
-            className="h-full w-full object-cover rounded-2xl absolute"
-          />
-          <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-500 opacity-60 rounded-xl" />
-          <nav className="h-full z-50">
-            <ul className="grid grid-cols-3 h-full justify-evenly place-items-center">
-              {links.map((link) => (
-                <li>
-                  <a href={link.src} target="_blank">
-                    <Typography
-                      color="white"
-                      variant="h5"
-                      className="hover:text-orange-700"
-                    >
-                      {link.title}
-                    </Typography>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </Card>
-
+        <NavigationBar />
         <div className="grid grid-cols-2 my-2 mx-auto w-[100%] gap-x-2 p-2">
-          <Card
-            className="w-[100%] h-56 mx-auto bg-transparent shadow-[0_0_40px_purple] relative"
-            shadow={false}
-          >
-            <img
-              src="placeholder4.png"
-              className="h-full w-full object-cover rounded-2xl absolute"
-            />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
-            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
-              <Typography variant="h4" color="white">
-                {`Total Runs`}
-              </Typography>
-              <Typography
-                variant="h1"
-                color="deep-orange"
-                className="font-bold"
-                children={totalRuns}
-              ></Typography>
-            </div>
-          </Card>
-          <Card
-            className="w-[100%] h-56 mx-auto bg-transparent shadow-[0_0_40px_purple] relative"
-            shadow={false}
-          >
-            <img
-              src="placeholder5.png"
-              className="h-full w-full object-cover rounded-2xl absolute"
-            />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
-
-            <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
-              <Typography variant="h4" color="white">
-                {`Unique Players`}
-              </Typography>
-              <Typography
-                variant="h1"
-                color="deep-orange"
-                className="font-bold"
-                children={totalUniquePlayers}
-              ></Typography>
-            </div>
-          </Card>
+          <TotalRunsCard />
+          <TotalPlayerCard />
         </div>
-        {/* testing */}
+
         <Card
           className="w-[100%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
           shadow={false}
@@ -159,8 +77,8 @@ export default function MainSection() {
                 key={index}
                 className=" hover:bg-black focus:bg-black flex flex-row"
               >
-                <div className="flex flex-col md:text-center md:items-center flex-1">
-                  <div class="relative mx-auto">
+                <div className="flex flex-col sm:text-center sm:items-center flex-1">
+                  <div className="relative mx-auto">
                     <Avatar
                       variant="circular"
                       src={`${player.img}.png`}
@@ -169,7 +87,7 @@ export default function MainSection() {
                     />
                     <img
                       src={`rings/discord-${player.ring}.gif`}
-                      class="absolute top-0 start-0"
+                      className="absolute top-0 start-0"
                     />
                   </div>
 
@@ -247,16 +165,7 @@ export default function MainSection() {
               </ListItem>
             ))}
           </List>
-          {/* <CardFooter>
-            <div className="flex justify-between items-center gap-4">
-              <div className="flex items-center gap-1">
-                <IconButton {...getItemProps(1)}>1</IconButton>
-                <IconButton {...getItemProps(2)}>2</IconButton>
-              </div>
-            </div>
-          </CardFooter> */}
         </Card>
-        {/* testing */}
         <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto w-[100%] gap-x-2">
           <Card
             className="w-[100%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
@@ -267,35 +176,7 @@ export default function MainSection() {
               className="h-full w-full object-cover rounded-2xl absolute"
             />
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
-
-            <div className="grid grid-cols-1 my-auto">
-              <Carousel className="rounded-xl" loop={true} autoplay={true}>
-                {HordePlayer.map((player) => (
-                  <div className="h-[200px] w-full">
-                    <div className="flex flex-row h-full justify-center gap-2 items-center">
-                      <Avatar
-                        src={player.img}
-                        size="xl"
-                        withBorder={true}
-                        className="p-0.5"
-                        color="deep-orange"
-                      />
-                      <div>
-                        <Typography variant="h4" color="white">
-                          {player.name}
-                        </Typography>
-                        <Typography
-                          variant="h6"
-                          color="deep-orange"
-                          className="font-semibold"
-                          children={player.mark}
-                        ></Typography>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Carousel>
-            </div>
+            <HordeCarousel />
           </Card>
           <Card
             className="w-[100%] h-56 mx-auto my-4 bg-transparent shadow-[0_0_40px_purple] relative"
@@ -306,35 +187,7 @@ export default function MainSection() {
               className="h-full w-full object-cover rounded-2xl absolute"
             />
             <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
-
-            <div className="grid grid-cols-1 my-auto">
-              <Carousel className="rounded-xl" loop={true} autoplay={true}>
-                {ExtremePlayer.map((player) => (
-                  <div className="h-[200px] w-full">
-                    <div className="flex flex-row h-full justify-center gap-2 items-center text-start">
-                      <Avatar
-                        src={player.img}
-                        size="xl"
-                        withBorder={true}
-                        className="p-0.5"
-                        color="blue"
-                      />
-                      <div>
-                        <Typography variant="h4" color="white">
-                          {player.name}
-                        </Typography>
-                        <Typography
-                          variant="h6"
-                          color="light-blue"
-                          className="font-semibold"
-                          children={player.mark}
-                        ></Typography>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Carousel>
-            </div>
+            <ExtremeCarousel />
           </Card>
         </div>
 
@@ -357,8 +210,8 @@ export default function MainSection() {
               ></Typography>
             </div>
             <div className="flex flex-row justify-center gap-2">
-              {pageInfo.mutators.map((mute) => (
-                <div>
+              {pageInfo.mutators.map((mute, index) => (
+                <div key={index}>
                   <Typography
                     color="pink"
                     variant="h6"

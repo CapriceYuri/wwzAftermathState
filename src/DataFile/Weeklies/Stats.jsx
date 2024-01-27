@@ -2,7 +2,7 @@ export const StatRun = {
   runs: [
     {
       img: "player-aedonis",
-      name: "Aedonis",
+      name: "𝔇𝔬𝔫𝔦𝔰𓆩♡𓆪",
       map: "Descent",
       diff: "Extreme",
       src: "https://www.youtube.com/watch?v=YVDekxwGXsA",
@@ -14,7 +14,7 @@ export const StatRun = {
     },
     {
       img: "player-aedonis",
-      name: "Aedonis",
+      name: "𝔇𝔬𝔫𝔦𝔰𓆩♡𓆪",
       map: "Descent",
       diff: "Extreme",
       src: "https://www.youtube.com/watch?v=Iv-NSDJ2Pow",
