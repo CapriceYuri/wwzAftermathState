@@ -58,7 +58,7 @@ export default function MainSection() {
   return (
     <section className="grid grid-cols-4 2xl:grid-cols-6 relative h-full overflow-x-hidden">
       <img
-        src="bgtesting.png"
+        src="coverbg.png"
         className="fixed h-lvh w-full object-cover -z-10"
       />
       <section className="col-span-4 2xl:col-start-2">
@@ -70,7 +70,7 @@ export default function MainSection() {
             src="placeholder.png"
             className="h-full w-full object-cover rounded-2xl absolute"
           />
-          <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-300 opacity-60 rounded-xl" />
+          <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-500 opacity-60 rounded-xl" />
           <nav className="h-full z-50">
             <ul className="grid grid-cols-3 h-full justify-evenly place-items-center">
               {links.map((link) => (
@@ -98,7 +98,7 @@ export default function MainSection() {
             src="kimiko.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-300 opacity-60 rounded-xl"></div>
+          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-500 opacity-60 rounded-xl"></div>
           <List className="z-50">
             <div>
               <Typography
@@ -220,7 +220,7 @@ export default function MainSection() {
               src="placeholder3.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-300 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -259,7 +259,7 @@ export default function MainSection() {
               src="placeholder2.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-300 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
 
             <div className="grid grid-cols-1 my-auto">
               <Carousel className="rounded-xl" loop={true} autoplay={true}>
@@ -300,7 +300,7 @@ export default function MainSection() {
             src="bunko.png"
             className="h-full w-full object-cover rounded-2xl fixed -z-10"
           />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-300 opacity-60 rounded-xl"></div>
+          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-500 opacity-60 rounded-xl"></div>
           <List className="z-50">
             <div>
               <Typography
@@ -415,7 +415,7 @@ export default function MainSection() {
               src="placeholder4.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-300 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
             <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
               <Typography variant="h4" color="white">
                 {`Total Runs`}
@@ -436,7 +436,7 @@ export default function MainSection() {
               src="placeholder5.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-300 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
 
             <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
               <Typography variant="h4" color="white">
