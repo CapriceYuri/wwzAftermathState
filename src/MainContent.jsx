@@ -114,13 +114,19 @@ export default function MainSection() {
                 className=" hover:bg-black focus:bg-black flex flex-row"
               >
                 <div className="flex flex-col md:text-center md:items-center flex-1">
-                  <Avatar
-                    variant="rounded"
-                    src={`${player.img}.png`}
-                    className="md:mx-auto p-0.5"
-                    withBorder={true}
-                    color="blue"
-                  />
+                  <div class="relative mx-auto">
+                    <Avatar
+                      variant="circular"
+                      src={`${player.img}.png`}
+                      className="md:mx-auto p-0.5"
+                      withBorder={true}
+                    />
+                    <img
+                      src={`rings/discord-${player.ring}.gif`}
+                      class="absolute top-0 start-0"
+                    />
+                  </div>
+
                   <div>
                     <Typography
                       variant="small"

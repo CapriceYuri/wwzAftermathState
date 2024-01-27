@@ -10,6 +10,7 @@ export const StatRun = {
       statInfo: "(957/957)",
       class: "Medic",
       team: "SOLO",
+      ring: "purple",
     },
     {
       img: "player-aedonis",
@@ -21,6 +22,7 @@ export const StatRun = {
       statInfo: "(863/863)",
       class: "Gunslinger",
       team: "SOLO",
+      ring: "purple",
     },
     {
       img: "player-nthpvn",
@@ -32,6 +34,7 @@ export const StatRun = {
       statInfo: "No Bot",
       class: "Gunslinger",
       team: "SOLO",
+      ring: "blue",
     },
     {
       img: "players/player-野口 ハヤシ",
@@ -43,6 +46,7 @@ export const StatRun = {
       statInfo: "4 Players",
       class: "",
       team: "TEAM",
+      ring: "yellow",
     },
     {
       img: "player-rasmuspost",
@@ -54,6 +58,7 @@ export const StatRun = {
       statInfo: "With Bot",
       class: "Gunslinger",
       team: "SOLO",
+      ring: "orange",
     },
     {
       img: "player-zombieflanders",
@@ -65,6 +70,7 @@ export const StatRun = {
       statInfo: "No Bot",
       class: "",
       team: "SOLO",
+      ring: "lightgreen",
     },
     {
       img: "player-SiberianPsych0",
@@ -76,6 +82,7 @@ export const StatRun = {
       statInfo: "No Bot",
       class: "",
       team: "SOLO",
+      ring: "violet",
     },
     {
       img: "players/player-xD3viLz",
@@ -87,6 +94,7 @@ export const StatRun = {
       statInfo: "No Bot",
       class: "Gunslinger",
       team: "SOLO",
+      ring: "darkblue",
     },
   ],
 };
