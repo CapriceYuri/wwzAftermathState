@@ -224,7 +224,7 @@ export default function MainSection() {
             {pageInfo.runs.map((player, index) => (
               <ListItem
                 key={index}
-                className=" hover:bg-black focus:bg-black flex flex-row"
+                className="hover:bg-black focus:bg-black flex flex-row"
               >
                 <div className="flex flex-col items-center text-center flex-1">
                   <Avatar
