@@ -2,9 +2,10 @@ import { Week0 } from "./Week0";
 import { Week1 } from "./Week1";
 import { Week2 } from "./Week2";
 import { Week3 } from "./Week3";
+import { Week4 } from "./Week4";
 import { StatRun } from "./Stats";
 
-export const allData = [Week3, Week2, Week1, Week0];
+export const allData = [Week4, Week3, Week2, Week1, Week0];
 const allPlayerProfile = [...allData, StatRun];
 
 let temp = 0;

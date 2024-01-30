@@ -300,6 +300,7 @@ export default function MainSection() {
                 <IconButton {...getItemProps(2)}>2</IconButton>
                 <IconButton {...getItemProps(3)}>3</IconButton>
                 <IconButton {...getItemProps(4)}>4</IconButton>
+                <IconButton {...getItemProps(5)}>5</IconButton>
               </div>
             </div>
           </CardFooter>
