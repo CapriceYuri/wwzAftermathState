@@ -22,7 +22,7 @@ export const Week5 = {
     {
       img: "player-osanai",
       name: "♡osanai♡",
-      map: "Key to the City",
+      map: "Hell and High Water",
       diff: "Challenge [Hard]",
       src: "https://www.youtube.com/watch?v=9ySu9_ds7wQ",
       time: 929,
@@ -31,7 +31,7 @@ export const Week5 = {
     {
       img: "player-Abang",
       name: "Abang Long",
-      map: "Key to the City",
+      map: "Hell and High Water",
       diff: "Challenge [Hard]",
       src: "https://www.youtube.com/watch?v=oPbRGFwPdy8",
       time: 893,
@@ -40,7 +40,7 @@ export const Week5 = {
     {
       img: "player-SiberianPsych0",
       name: "SiberianPsych0",
-      map: "Key to the City",
+      map: "Hell and High Water",
       diff: "Challenge [Hard]",
       src: "https://www.youtube.com/watch?v=fyx3leMkkMU&t=412s",
       time: 690,
@@ -49,7 +49,7 @@ export const Week5 = {
     {
       img: "player-玉米大战僵尸",
       name: "玉米大战僵尸",
-      map: "Key to the City",
+      map: "Hell and High Water",
       diff: "Challenge [Hard]",
       src: "https://www.bilibili.com/video/BV157421N7nX/",
       time: 698,
@@ -58,7 +58,7 @@ export const Week5 = {
     {
       img: "player-visbell",
       name: "visbell",
-      map: "Key to the City",
+      map: "Hell and High Water",
       diff: "Challenge [Hard]",
       src: "https://www.youtube.com/watch?v=xhKnu6W3r0s",
       time: 1161,
