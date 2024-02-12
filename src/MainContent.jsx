@@ -42,12 +42,12 @@ export default function MainSection() {
   // Functions & Callbacks
 
   return (
-    <section className="grid grid-cols-4 2xl:grid-cols-6 relative h-full overflow-x-hidden">
+    <section className="grid grid-cols-4 relative h-full overflow-x-hidden">
       <img
         src="coverbg.png"
         className="fixed h-lvh w-full object-cover -z-10"
       />
-      <section className="col-span-4 2xl:col-start-2">
+      <section className="col-span-4 md:px-10 lg:px-20 2xl:px-36">
         <NavigationBar />
         <div className="grid grid-cols-2 my-2 mx-auto w-[100%] gap-x-2 p-2">
           <TotalRunsCard />
