@@ -27,7 +27,7 @@ export default function MainSection() {
 
   const getItemProps = (index) => ({
     variant: active === index ? "gradient" : "text",
-    color: "black",
+    color: "white",
     onClick: () => {
       setActive(index);
       setPageInfo(allData[index - 1]);
@@ -195,11 +195,21 @@ export default function MainSection() {
           className="w-[100%] mx-auto mb-8 bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
           shadow={false}
         >
-          <img
-            src="bunko.png"
-            className="h-full w-full object-cover rounded-2xl fixed -z-10"
-          />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-500 opacity-60 rounded-xl"></div>
+          <div className="h-full w-full object-cover rounded-2xl absolute -z-10" />
+          <div className="absolute h-full w-full bg-gradient-to-r from-purple-900 to-blue-700 opacity-60 rounded-xl"></div>
+          <CardFooter>
+            <div className="flex justify-center items-center gap-4">
+              <div className="flex items-center gap-1">
+                <IconButton {...getItemProps(1)}>1</IconButton>
+                <IconButton {...getItemProps(2)}>2</IconButton>
+                <IconButton {...getItemProps(3)}>3</IconButton>
+                <IconButton {...getItemProps(4)}>4</IconButton>
+                <IconButton {...getItemProps(5)}>5</IconButton>
+                <IconButton {...getItemProps(6)}>6</IconButton>
+                <IconButton {...getItemProps(7)}>7</IconButton>
+              </div>
+            </div>
+          </CardFooter>
           <List className="z-50">
             <div>
               <Typography
@@ -224,8 +234,15 @@ export default function MainSection() {
             {pageInfo.runs.map((player, index) => (
               <ListItem
                 key={index}
-                className="hover:bg-black focus:bg-black flex flex-row"
+                className={`hover:bg-black focus:bg-black flex flex-row relative`}
               >
+                <div
+                  className={
+                    index === 0
+                      ? `bg-[url(/rings/longfire-blue.gif)] border-2 border-black rounded-2xl bg-contain opacity-50 absolute h-full w-full top-0 left-0 -z-10 bg-black`
+                      : "bg-black"
+                  }
+                />
                 <div className="flex flex-col items-center text-center flex-1">
                   <Avatar
                     variant="rounded"
@@ -235,7 +252,7 @@ export default function MainSection() {
                   <div>
                     <Typography
                       variant="small"
-                      color="white"
+                      color="amber"
                       className="font-bold"
                       children={player.name}
                     ></Typography>
@@ -244,14 +261,14 @@ export default function MainSection() {
                 <div className="mx-4 text-center flex-1">
                   <Typography
                     variant="h6"
-                    color="white"
+                    color="amber"
                     className="font-semibold"
                     children={player.map}
                   ></Typography>
 
                   <Typography
                     variant="small"
-                    color="amber"
+                    color="white"
                     className="font-normal"
                     children={player.diff}
                   ></Typography>
@@ -260,7 +277,7 @@ export default function MainSection() {
                 <div className="mx-4 text-center flex-1">
                   <Typography
                     variant="h5"
-                    color={player.rating === "SOLO" ? "deep-orange" : "amber"}
+                    color={player.rating === "SOLO" ? "red" : "cyan"}
                     className="font-semibold"
                     children={player.rating}
                   ></Typography>
@@ -293,18 +310,6 @@ export default function MainSection() {
               </ListItem>
             ))}
           </List>
-          <CardFooter>
-            <div className="flex justify-between items-center gap-4">
-              <div className="flex items-center gap-1">
-                <IconButton {...getItemProps(1)}>1</IconButton>
-                <IconButton {...getItemProps(2)}>2</IconButton>
-                <IconButton {...getItemProps(3)}>3</IconButton>
-                <IconButton {...getItemProps(4)}>4</IconButton>
-                <IconButton {...getItemProps(5)}>5</IconButton>
-                <IconButton {...getItemProps(6)}>6</IconButton>
-              </div>
-            </div>
-          </CardFooter>
         </Card>
       </section>
     </section>

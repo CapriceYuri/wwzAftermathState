@@ -2,6 +2,33 @@ export const Week5 = {
   mutators: ["Pinned Down", "Weakness", "Slasher CW"],
   runs: [
     {
+      img: "player-enderlem",
+      name: "Enderlem",
+      map: "Hell and High Water",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=ducvaEyPcn4",
+      time: 646,
+      rating: "SOLO",
+    },
+    {
+      img: "player-zMeba",
+      name: "zMeba",
+      map: "Hell and High Water",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=I1cl7A1CJCw",
+      time: 1240,
+      rating: "TEAM",
+    },
+    {
+      img: "player-Rainiere",
+      name: "Rainiere888",
+      map: "Hell and High Water",
+      diff: "Challenge [Hard]",
+      src: "https://www.youtube.com/watch?v=DIAfg_NwEnU",
+      time: 1232,
+      rating: "SOLO",
+    },
+    {
       img: "player-NieR",
       name: "NieR 777",
       map: "Hell and High Water",
