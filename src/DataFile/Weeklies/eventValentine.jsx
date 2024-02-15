@@ -2,11 +2,10 @@ export const eventValentine = {
   title: "❤️ Bloody Valentine Event ❤️",
   runs: [
     {
-      duoname: "Tina & Mew",
-      p1_img: "player-Tina",
-      p1_name: "Tina",
-      p2_name: "Mew",
-      p2_img: "player-Mew",
+      p1_img: "icon-saber",
+      p1_name: "#",
+      p2_name: "#",
+      p2_img: "icon-saber",
       map: "Marseille",
       diff: "Speedrun [Normal]",
       src: "",
