@@ -67,7 +67,7 @@ export const HordePlayer = [
   },
   {
     id: 12,
-    img: "players/player-gogu.jpg",
+    img: "players/player-gogu.png",
     name: "gogu7382",
     mark: "Horde Legends",
   },
