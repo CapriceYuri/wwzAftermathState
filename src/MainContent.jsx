@@ -64,12 +64,12 @@ export default function MainSection() {
         <TokyoSpeedrunCard />
         {/* TEST */}
         <Card
-          className="w-[100%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
+          className="w-[100%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] border-4 border-black rounded-2xl relative"
           shadow={false}
         >
           <img
             src="kimiko.png"
-            className="h-full w-full object-cover rounded-2xl fixed -z-10"
+            className="h-full w-full object-cover rounded-xl fixed -z-10"
           />
           <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-500 opacity-60 rounded-xl"></div>
           <List className="z-50">
@@ -154,7 +154,7 @@ export default function MainSection() {
                   ></Typography>
                 </div>
 
-                <div className="flex justify-center flex-1">
+                <div className="flex justify-center me-4">
                   <a href={player.src} target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -201,10 +201,10 @@ export default function MainSection() {
         </div>
 
         <Card
-          className="w-[100%] mx-auto mb-8 bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] relative"
+          className="w-[100%] mx-auto mb-8 bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] border-4 border-black rounded-2xl relative"
           shadow={false}
         >
-          <div className="h-full w-full object-cover rounded-2xl absolute -z-10" />
+          <div className="h-full w-full object-cover rounded-xl absolute -z-10" />
           <div className="absolute h-full w-full bg-gradient-to-r from-purple-900 to-blue-700 opacity-60 rounded-xl"></div>
           <CardFooter>
             <div className="flex justify-center items-center gap-4">

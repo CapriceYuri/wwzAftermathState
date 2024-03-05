@@ -1,6 +1,18 @@
 export const StatRun = {
   runs: [
     {
+      img: "player-aedonis",
+      name: "𝔇𝔬𝔫𝔦𝔰𓆩♡𓆪",
+      map: "Cruise Control",
+      diff: "Extreme",
+      src: "https://www.youtube.com/watch?v=iYmJ2v4jAKI",
+      stat: "No Weapon",
+      statInfo: "Only Shield & Melee",
+      class: "Vanguard",
+      team: "SOLO",
+      ring: "purple",
+    },
+    {
       img: "creator",
       name: "CapriceYuri",
       map: "Hell & High Water",
