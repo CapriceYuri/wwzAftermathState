@@ -1,5 +1,5 @@
 export const eventChristmas = {
-  title: "🎄 Christmas Tree Event 🎄",
+  title: "Christmas Tree",
   runs: [
     {
       groups: "Tina & Mew & Aedonis & Imperion",

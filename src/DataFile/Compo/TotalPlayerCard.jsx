@@ -4,14 +4,14 @@ import { totalUniquePlayers } from "../Weeklies/DataLogic";
 export default function TotalPlayerCard() {
   return (
     <Card
-      className="w-[100%] h-56 mx-auto bg-transparent shadow-[0_0_40px_purple] relative"
+      className="w-[100%] h-56 mx-auto bg-transparent relative rounded-2xl border-4 border-black"
       shadow={false}
     >
       <img
         src="placeholder5.png"
-        className="h-full w-full object-cover rounded-2xl absolute"
+        className="h-full w-full object-cover rounded-xl absolute"
       />
-      <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
+      <div className="absolute h-full w-full bg-gradient-to-r to-black via-purple-900 from-black opacity-70 rounded-xl" />
 
       <div className="z-50 flex flex-col h-full justify-center items-center mx-auto">
         <Typography variant="h4" color="white">

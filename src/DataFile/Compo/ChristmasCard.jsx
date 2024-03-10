@@ -10,19 +10,19 @@ import {
 export default function ChristmasCard() {
   return (
     <Card
-      className="w-[100%] mx-auto mb-4 bg-transparent rounded-2xl backdrop-blur-xl shadow-[0_0_50px_green] relative"
+      className="w-[100%] mx-auto bg-transparent rounded-2xl backdrop-blur-xl relative"
       shadow={false}
     >
-      <div className="bg-gradient-to-t from-green-400 to-cyan-600 h-full w-full object-cover rounded-2xl fixed -z-10 opacity-60" />
+      <div className="bg-gradient-to-b from-black to-cyan-600 h-full w-full object-cover rounded-2xl fixed -z-10 opacity-90" />
       <List className="z-20 relative">
         <div
-          className={`bg-[url(/rings/christmasbg.gif)] border-2 border-green-400 rounded-2xl bg-contain opacity-40 absolute h-full w-full top-0 left-0 -z-10 `}
+          className={`bg-[url(/rings/christmasbg.gif)] border-4 border-green-900 rounded-2xl bg-contain opacity-40 absolute h-full w-full top-0 left-0 -z-10 `}
         />
         <div>
           <Typography
             color="white"
             variant="h4"
-            className="text-center p-2 rounded-2xl"
+            className="text-center p-2 rounded-2xl font-[monospace]"
             children={eventChristmas.title}
           ></Typography>
         </div>

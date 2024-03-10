@@ -64,20 +64,20 @@ export default function MainSection() {
         <TokyoSpeedrunCard />
         {/* TEST */}
         <Card
-          className="w-[100%] mx-auto bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] border-4 border-black rounded-2xl relative"
+          className="w-[100%] mx-auto mt-8 bg-transparent backdrop-blur-xl shadow-[0_0_15px_white] border-4 border-black rounded-2xl relative"
           shadow={false}
         >
           <img
             src="kimiko.png"
             className="h-full w-full object-cover rounded-xl fixed -z-10"
           />
-          <div className="absolute h-full w-full bg-gradient-to-b from-purple-900 to-blue-500 opacity-60 rounded-xl"></div>
+          <div className="absolute h-full w-full bg-gradient-to-r to-black via-purple-900 from-black opacity-70 rounded-xl"></div>
           <List className="z-50">
             <div>
               <Typography
                 color="deep-orange"
                 variant="h4"
-                className="text-center p-2 font-semibold"
+                className="text-center p-2 font-[monospace]"
                 children="CHALLENGE RUNS"
               ></Typography>
             </div>
@@ -184,7 +184,7 @@ export default function MainSection() {
               src="placeholder3.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-r to-black via-purple-900 from-black opacity-70 rounded-xl" />
             <HordeCarousel />
           </Card>
           <Card
@@ -195,17 +195,17 @@ export default function MainSection() {
               src="placeholder2.png"
               className="h-full w-full object-cover rounded-2xl absolute"
             />
-            <div className="absolute h-full w-full bg-gradient-to-b to-purple-900 from-blue-500 opacity-60 rounded-xl" />
+            <div className="absolute h-full w-full bg-gradient-to-r to-black via-purple-900 from-black opacity-70 rounded-xl" />
             <ExtremeCarousel />
           </Card>
         </div>
 
         <Card
-          className="w-[100%] mx-auto mb-8 bg-transparent backdrop-blur-xl shadow-[0_0_50px_purple] border-4 border-black rounded-2xl relative"
+          className="w-[100%] mx-auto mb-8 bg-transparent backdrop-blur-xl shadow-[0_0_15px_white] border-4 border-black rounded-2xl relative"
           shadow={false}
         >
           <div className="h-full w-full object-cover rounded-xl absolute -z-10" />
-          <div className="absolute h-full w-full bg-gradient-to-r from-purple-900 to-blue-700 opacity-60 rounded-xl"></div>
+          <div className="absolute h-full w-full bg-gradient-to-r from-black via-purple-900 to-black opacity-70 rounded-xl"></div>
           <CardFooter>
             <div className="flex justify-center items-center gap-4">
               <div className="flex items-center gap-1">
@@ -224,7 +224,7 @@ export default function MainSection() {
               <Typography
                 color="orange"
                 variant="h5"
-                className="text-center p-2"
+                className="text-center p-2 font-[monospace]"
                 children="WEEKLY LEADERBOARD"
               ></Typography>
             </div>
@@ -248,7 +248,7 @@ export default function MainSection() {
                 <div
                   className={
                     index === 0
-                      ? `bg-[url(/rings/longfire-blue.gif)] border-2 border-black rounded-2xl bg-contain opacity-50 absolute h-full w-full top-0 left-0 -z-10 bg-black`
+                      ? `bg-[url(/rings/longfire-blue.gif)] border-2 border-black rounded-2xl bg-contain opacity-40 absolute h-full w-full top-0 left-0 -z-10 bg-black`
                       : "bg-black"
                   }
                 />
@@ -262,39 +262,39 @@ export default function MainSection() {
                     <Typography
                       variant="small"
                       color="amber"
-                      className="font-bold"
+                      className="font-semibold font-[monospace]"
                       children={player.name}
                     ></Typography>
                   </div>
                 </div>
                 <div className="mx-4 text-center flex-1">
                   <Typography
-                    variant="h6"
+                    variant="small"
                     color="amber"
-                    className="font-semibold"
+                    className="font-semibold font-[monospace]"
                     children={player.map}
                   ></Typography>
 
                   <Typography
                     variant="small"
                     color="white"
-                    className="font-normal"
+                    className="font-normal font-[monospace]"
                     children={player.diff}
                   ></Typography>
                 </div>
 
                 <div className="mx-4 text-center flex-1">
                   <Typography
-                    variant="h5"
+                    variant="h6"
                     color={player.rating === "SOLO" ? "red" : "cyan"}
-                    className="font-semibold"
+                    className="font-semibold font-[monospace]"
                     children={player.rating}
                   ></Typography>
 
                   <Typography
-                    variant="h6"
+                    variant="small"
                     color="white"
-                    className="font-normal"
+                    className="font-normal font-[monospace]"
                     children={conversion(player.time)}
                   ></Typography>
                 </div>

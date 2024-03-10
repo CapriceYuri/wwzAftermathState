@@ -1,5 +1,5 @@
 export const eventTokyo = {
-  title: "Tokyo Speedrun Event",
+  title: "Tokyo Speedrun",
   runs: [
     {
       p1_name: "Tina",

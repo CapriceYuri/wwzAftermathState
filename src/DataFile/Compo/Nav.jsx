@@ -12,14 +12,14 @@ const links = [
 export default function NavigationBar() {
   return (
     <Card
-      className="w-[100%] h-16 mb-4 mx-auto bg-transparent shadow-[0_0_50px_purple]"
+      className="w-[100%] h-16 mb-4 mx-auto bg-transparent border-4 border-black"
       shadow={false}
     >
       <img
         src="placeholder.png"
         className="h-full w-full object-cover rounded-2xl absolute"
       />
-      <div className="absolute h-full w-full bg-gradient-to-t from-purple-900 to-blue-500 opacity-60 rounded-xl" />
+      <div className="absolute h-full w-full bg-gradient-to-r to-black via-purple-900 from-black opacity-70 rounded-xl" />
       <nav className="h-full z-50">
         <ul className="grid grid-cols-3 h-full justify-evenly place-items-center">
           {links.map((link, index) => (

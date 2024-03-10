@@ -15,19 +15,19 @@ export default function TokyoSpeedrunCard() {
   };
   return (
     <Card
-      className="w-[100%] mx-auto mb-4 bg-transparent rounded-2xl backdrop-blur-xl shadow-[0_0_20px_blue] relative"
+      className="w-[100%] mx-auto bg-transparent rounded-2xl backdrop-blur-xl relative"
       shadow={false}
     >
-      <div className="bg-gradient-to-r from-blue-600 to-blue-900 h-full w-full object-cover rounded-2xl fixed -z-10 opacity-60" />
+      <div className="bg-gradient-to-b from-black to-blue-900 h-full w-full object-cover rounded-2xl fixed -z-10 opacity-90" />
       <List className="z-20 relative">
         <div
-          className={`bg-[url(/rings/speedbg.gif)] border-2 border-blue-400 rounded-2xl bg-cover bg-center opacity-70 absolute h-full w-full top-0 left-0 -z-10 bg-black bg-no-repeat`}
+          className={`bg-[url(/rings/speedbg.gif)] border-4 border-cyan-600 rounded-2xl bg-cover bg-center opacity-70 absolute h-full w-full top-0 left-0 -z-10 bg-black bg-no-repeat`}
         />
         <div>
           <Typography
             color="white"
             variant="h4"
-            className="text-center p-2 rounded-2xl"
+            className="text-center p-2 rounded-2xl font-[monospace]"
             children={eventTokyo.title}
           ></Typography>
         </div>

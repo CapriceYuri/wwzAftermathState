@@ -1,5 +1,5 @@
 export const eventHordeLord = {
-  title: " XL Rome Horde Event ",
+  title: "XL Rome Horde",
   runs: [
     {
       p1_name: "Wintersky",

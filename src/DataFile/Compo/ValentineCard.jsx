@@ -27,7 +27,7 @@ export default function ValentineCard() {
           <Typography
             color="red"
             variant="h4"
-            className="text-center p-2 rounded-2xl"
+            className="text-center p-2 rounded-2xl font-[monospace]"
             children={eventValentine.title}
           ></Typography>
         </div>
